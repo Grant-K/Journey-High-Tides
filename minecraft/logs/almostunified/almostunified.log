@@ -1,0 +1,86 @@
+[11:29:28.496] [INFO]: Loading config 'startup.json'.
+[11:29:56.295] [INFO]: Loaded plugins: almostunified:common, almostunified:neoforge, almostunified_ie:immersiveengineering
+[11:32:16.138] [WARN]: Reload detected. Reconstructing runtime.
+[11:32:16.146] [INFO]: Loading config 'debug.json'.
+[11:32:16.151] [INFO]: Loading config 'placeholders.json'.
+[11:32:16.168] [INFO]: Loading config 'tags.json'.
+[11:32:16.264] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:ingots/electrum' -> [createaddition:electrum_ingot]
+[11:32:16.264] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:wires/copper' -> [createaddition:copper_wire]
+[11:32:16.264] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:nuggets/electrum' -> [createaddition:electrum_nugget]
+[11:32:16.265] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:plates/electrum' -> [createaddition:electrum_sheet]
+[11:32:16.265] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:dusts/gold' -> [occultism:gold_dust]
+[11:32:16.266] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:plates/gold' -> [immersiveengineering:plate_gold]
+[11:32:16.266] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:storage_blocks/electrum' -> [createaddition:electrum_block]
+[11:32:16.269] [INFO]: [AutoHiding] Hiding 3/5 items for tag '#c:ores/lapis' -> [meadow:alpine_lapis_ore, spectrum:blackslag_lapis_ore, aether_ores:holystone_lapis_ore]
+[11:32:16.270] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:plates/copper' -> [immersiveengineering:plate_copper]
+[11:32:16.270] [INFO]: [AutoHiding] Hiding 2/3 items for tag '#c:ingots/silver' -> [silentgems:silver_ingot, occultism:silver_ingot]
+[11:32:16.270] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:dusts/obsidian' -> [occultism:obsidian_dust]
+[11:32:16.270] [INFO]: [AutoHiding] Hiding 3/5 items for tag '#c:ores/iron' -> [meadow:alpine_iron_ore, aether_ores:holystone_iron_ore, spectrum:blackslag_iron_ore]
+[11:32:16.270] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:storage_blocks/raw_silver' -> [occultism:raw_silver_block]
+[11:32:16.271] [INFO]: [AutoHiding] Hiding 4/6 items for tag '#c:ores/silver' -> [silentgems:deepslate_silver_ore, occultism:silver_ore, silentgems:silver_ore, occultism:silver_ore_deepslate]
+[11:32:16.271] [INFO]: [AutoHiding] Hiding 3/5 items for tag '#c:ores/diamond' -> [aether_ores:holystone_diamond_ore, meadow:alpine_diamond_ore, spectrum:blackslag_diamond_ore]
+[11:32:16.272] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:plates/iron' -> [immersiveengineering:plate_iron]
+[11:32:16.272] [INFO]: [AutoHiding] Hiding 3/5 items for tag '#c:ores/emerald' -> [aether_ores:holystone_emerald_ore, meadow:alpine_emerald_ore, spectrum:blackslag_emerald_ore]
+[11:32:16.272] [INFO]: [AutoHiding] Hiding 2/3 items for tag '#c:nuggets/silver' -> [occultism:silver_nugget, silentgems:silver_nugget]
+[11:32:16.272] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:nuggets/copper' -> [immersiveengineering:nugget_copper]
+[11:32:16.272] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:nuggets/steel' -> [createbigcannons:steel_scrap]
+[11:32:16.272] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:storage_blocks/steel' -> [createbigcannons:steel_block]
+[11:32:16.273] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:wires/electrum' -> [createaddition:electrum_wire]
+[11:32:16.273] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:dusts/silver' -> [occultism:silver_dust]
+[11:32:16.273] [INFO]: [AutoHiding] Hiding 2/3 items for tag '#c:storage_blocks/silver' -> [occultism:silver_block, silentgems:silver_block]
+[11:32:16.273] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:dusts/copper' -> [occultism:copper_dust]
+[11:32:16.273] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:nuggets/netherite' -> [createdeco:netherite_nugget]
+[11:32:16.273] [INFO]: [AutoHiding] Hiding 2/3 items for tag '#c:rods/iron' -> [silentgear:iron_rod, createaddition:iron_rod]
+[11:32:16.273] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:dusts/iron' -> [occultism:iron_dust]
+[11:32:16.273] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:raw_materials/silver' -> [occultism:raw_silver]
+[11:32:16.274] [INFO]: [AutoHiding] Hiding 3/6 items for tag '#c:ores/gold' -> [spectrum:blackslag_gold_ore, meadow:alpine_gold_ore, aether_ores:holystone_gold_ore]
+[11:32:16.274] [INFO]: [AutoHiding] Hiding 3/5 items for tag '#c:ores/copper' -> [spectrum:blackslag_copper_ore, aether_ores:holystone_copper_ore, meadow:alpine_copper_ore]
+[11:32:16.274] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:ingots/steel' -> [createbigcannons:steel_ingot]
+[11:32:17.273] [INFO]: Loading config 'duplicates.json'.
+[11:32:17.276] [INFO]: Recipe count: 28556
+[11:32:17.399] [INFO]: 23102 out of 28556 recipes were loaded for unification.
+[11:32:18.040] [INFO]: Recipe count afterwards: 28476 (done in 763.9 ms)
+[11:32:21.286] [ERROR]: The following recipes were unified and threw exceptions when being loaded: [create:crushing/compat/silentgems/nether_sapphire_ore, create:crushing/compat/silentgems/ruby_ore, aether_ores:crushing/holystone_diamond_ore, aether_ores:crushing/holystone_gold_ore, create:crushing/compat/silentgems/deepslate_sapphire_ore, aether_ores:crushing/holystone_lapis_ore, create:crushing/compat/silentgems/deepslate_ruby_ore, create:crushing/compat/silentgems/end_ruby_ore, create:crushing/compat/silentgems/peridot_ore, create:crushing/compat/silentgems/end_sapphire_ore, aether_ores:crushing/holystone_copper_ore, aether_ores:crushing/holystone_emerald_ore, create:crushing/compat/silentgems/sapphire_ore, create:crushing/compat/silentgems/end_peridot_ore, create:crushing/compat/silentgems/nether_ruby_ore, aether_ores:crushing/holystone_iron_ore, create:crushing/compat/silentgems/deepslate_peridot_ore, create:crushing/compat/silentgems/nether_peridot_ore]
+[11:32:21.286] [WARN]: Try to add them to the ignore list and if the problem is gone, report it to the Almost Unified developers.
+[11:33:19.233] [WARN]: Reload detected. Reconstructing runtime.
+[11:33:19.233] [INFO]: Loading config 'debug.json'.
+[11:33:19.234] [INFO]: Loading config 'placeholders.json'.
+[11:33:19.235] [INFO]: Loading config 'tags.json'.
+[11:33:19.240] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:ingots/electrum' -> [createaddition:electrum_ingot]
+[11:33:19.240] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:wires/copper' -> [createaddition:copper_wire]
+[11:33:19.240] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:nuggets/electrum' -> [createaddition:electrum_nugget]
+[11:33:19.240] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:plates/electrum' -> [createaddition:electrum_sheet]
+[11:33:19.240] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:dusts/gold' -> [occultism:gold_dust]
+[11:33:19.240] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:plates/gold' -> [immersiveengineering:plate_gold]
+[11:33:19.240] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:storage_blocks/electrum' -> [createaddition:electrum_block]
+[11:33:19.240] [INFO]: [AutoHiding] Hiding 3/5 items for tag '#c:ores/lapis' -> [meadow:alpine_lapis_ore, spectrum:blackslag_lapis_ore, aether_ores:holystone_lapis_ore]
+[11:33:19.240] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:plates/copper' -> [immersiveengineering:plate_copper]
+[11:33:19.240] [INFO]: [AutoHiding] Hiding 2/3 items for tag '#c:ingots/silver' -> [silentgems:silver_ingot, occultism:silver_ingot]
+[11:33:19.240] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:dusts/obsidian' -> [occultism:obsidian_dust]
+[11:33:19.240] [INFO]: [AutoHiding] Hiding 3/5 items for tag '#c:ores/iron' -> [meadow:alpine_iron_ore, aether_ores:holystone_iron_ore, spectrum:blackslag_iron_ore]
+[11:33:19.241] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:storage_blocks/raw_silver' -> [occultism:raw_silver_block]
+[11:33:19.241] [INFO]: [AutoHiding] Hiding 4/6 items for tag '#c:ores/silver' -> [silentgems:deepslate_silver_ore, occultism:silver_ore, silentgems:silver_ore, occultism:silver_ore_deepslate]
+[11:33:19.241] [INFO]: [AutoHiding] Hiding 3/5 items for tag '#c:ores/diamond' -> [aether_ores:holystone_diamond_ore, meadow:alpine_diamond_ore, spectrum:blackslag_diamond_ore]
+[11:33:19.242] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:plates/iron' -> [immersiveengineering:plate_iron]
+[11:33:19.242] [INFO]: [AutoHiding] Hiding 3/5 items for tag '#c:ores/emerald' -> [aether_ores:holystone_emerald_ore, meadow:alpine_emerald_ore, spectrum:blackslag_emerald_ore]
+[11:33:19.242] [INFO]: [AutoHiding] Hiding 2/3 items for tag '#c:nuggets/silver' -> [occultism:silver_nugget, silentgems:silver_nugget]
+[11:33:19.242] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:nuggets/copper' -> [immersiveengineering:nugget_copper]
+[11:33:19.242] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:nuggets/steel' -> [createbigcannons:steel_scrap]
+[11:33:19.242] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:storage_blocks/steel' -> [createbigcannons:steel_block]
+[11:33:19.242] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:wires/electrum' -> [createaddition:electrum_wire]
+[11:33:19.242] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:dusts/silver' -> [occultism:silver_dust]
+[11:33:19.242] [INFO]: [AutoHiding] Hiding 2/3 items for tag '#c:storage_blocks/silver' -> [occultism:silver_block, silentgems:silver_block]
+[11:33:19.242] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:dusts/copper' -> [occultism:copper_dust]
+[11:33:19.242] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:nuggets/netherite' -> [createdeco:netherite_nugget]
+[11:33:19.242] [INFO]: [AutoHiding] Hiding 2/3 items for tag '#c:rods/iron' -> [silentgear:iron_rod, createaddition:iron_rod]
+[11:33:19.242] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:dusts/iron' -> [occultism:iron_dust]
+[11:33:19.242] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:raw_materials/silver' -> [occultism:raw_silver]
+[11:33:19.242] [INFO]: [AutoHiding] Hiding 3/6 items for tag '#c:ores/gold' -> [spectrum:blackslag_gold_ore, meadow:alpine_gold_ore, aether_ores:holystone_gold_ore]
+[11:33:19.243] [INFO]: [AutoHiding] Hiding 3/5 items for tag '#c:ores/copper' -> [spectrum:blackslag_copper_ore, aether_ores:holystone_copper_ore, meadow:alpine_copper_ore]
+[11:33:19.243] [INFO]: [AutoHiding] Hiding 1/2 items for tag '#c:ingots/steel' -> [createbigcannons:steel_ingot]
+[11:33:20.129] [INFO]: Loading config 'duplicates.json'.
+[11:33:20.130] [INFO]: Recipe count: 28555
+[11:33:20.235] [INFO]: 23101 out of 28555 recipes were loaded for unification.
+[11:33:20.566] [INFO]: Recipe count afterwards: 28475 (done in 435.7 ms)
+[11:33:22.279] [ERROR]: The following recipes were unified and threw exceptions when being loaded: [create:crushing/compat/silentgems/nether_sapphire_ore, create:crushing/compat/silentgems/ruby_ore, aether_ores:crushing/holystone_diamond_ore, aether_ores:crushing/holystone_gold_ore, create:crushing/compat/silentgems/deepslate_sapphire_ore, aether_ores:crushing/holystone_lapis_ore, create:crushing/compat/silentgems/deepslate_ruby_ore, create:crushing/compat/silentgems/end_ruby_ore, create:crushing/compat/silentgems/peridot_ore, create:crushing/compat/silentgems/end_sapphire_ore, aether_ores:crushing/holystone_copper_ore, aether_ores:crushing/holystone_emerald_ore, create:crushing/compat/silentgems/sapphire_ore, create:crushing/compat/silentgems/end_peridot_ore, create:crushing/compat/silentgems/nether_ruby_ore, aether_ores:crushing/holystone_iron_ore, create:crushing/compat/silentgems/deepslate_peridot_ore, create:crushing/compat/silentgems/nether_peridot_ore]
+[11:33:22.279] [WARN]: Try to add them to the ignore list and if the problem is gone, report it to the Almost Unified developers.

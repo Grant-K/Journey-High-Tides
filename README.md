@@ -1,2 +1,2 @@
 # Journey High Tides
-And Open Ended Pirate Exploration Pack
+An open-ended exploration pack all about being a pirate - now with Aeronautics!

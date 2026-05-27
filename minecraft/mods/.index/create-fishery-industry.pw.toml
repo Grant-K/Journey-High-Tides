@@ -1,0 +1,16 @@
+filename = 'createfisheryindustry-5.1.0.jar'
+name = 'Create: Fishery Industry'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '329d49786e0925d49ef11c051e081914bb2fcc3e'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 8109209
+project-id = 1245539

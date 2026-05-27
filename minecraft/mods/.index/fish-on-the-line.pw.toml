@@ -1,0 +1,16 @@
+filename = 'fishontheline-1.21.1-3.5.jar'
+name = 'Fish On The Line'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge', 'forge', 'quilt', 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '196fd652358c99be862e01bc1b3780ea1ebdaf2b'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 6185986
+project-id = 450603

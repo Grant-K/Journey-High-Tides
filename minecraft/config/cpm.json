@@ -1,0 +1,18 @@
+{
+  "editorLastVersion": "0.6.25a",
+  "titleScreenButton": true,
+  "playerSettings": {},
+  "globalSettings": {
+    "safetyProfile": "off"
+  },
+  "friendSettings": {},
+  "keybinds": {},
+  "blockedList": {},
+  "editorRecentProjects": [],
+  "safetyProfiles": {},
+  "friendList": {},
+  "serverSettings": {
+    "www.dracolyte.online": {}
+  },
+  "selectedModel": "DragonessV2.cpmmodel"
+}

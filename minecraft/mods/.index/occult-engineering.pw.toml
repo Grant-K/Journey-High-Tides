@@ -1,0 +1,16 @@
+filename = 'occultengineering-1.21.1-0.12.3.jar'
+name = 'Create: Occult Engineering'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'beta'
+
+[download]
+hash = 'adc9de9717b78564f7171340b99bccf7a722d2e412b6cde7e7c8465c6905c3a70c5d780750abf8213844b5032638e166d2cc387d781822d34ba0c03ccce123ff'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/FHMHF9Qr/versions/Se09d8Qf/occultengineering-1.21.1-0.12.3.jar'
+
+[update.modrinth]
+mod-id = 'FHMHF9Qr'
+version = 'Se09d8Qf'

@@ -1,0 +1,137 @@
+import { $Executor_, $CompletableFuture } from "@package/java/util/concurrent";
+import { $SplashManagerAccessor } from "@package/com/teamabnormals/blueprint/client/screen/splash";
+import { $ResourceManager, $SimplePreparableReloadListener, $PreparableReloadListener, $PreparableReloadListener$PreparationBarrier_ } from "@package/net/minecraft/server/packs/resources";
+import { $User } from "@package/net/minecraft/client";
+import { $PaintingVariant_ } from "@package/net/minecraft/world/entity/decoration";
+import { $List, $UUID_, $Set_ } from "@package/java/util";
+import { $MetadataSectionSerializer } from "@package/net/minecraft/server/packs/metadata";
+import { $Supplier } from "@package/java/util/function";
+import { $Holder_ } from "@package/net/minecraft/core";
+import { $Path_, $Path } from "@package/java/nio/file";
+import { $VanillaPackResources } from "@package/net/minecraft/server/packs";
+import { $GameProfile } from "@package/com/mojang/authlib";
+import { $TextureAtlasSprite, $TextureManager } from "@package/net/minecraft/client/renderer/texture";
+import { $MapDecoration_ } from "@package/net/minecraft/world/level/saveddata/maps";
+import { $Enum, $Record, $AutoCloseable } from "@package/java/lang";
+import { $Property_ } from "@package/com/mojang/authlib/properties";
+import { $ProfilerFiller } from "@package/net/minecraft/util/profiling";
+import { $SplashRenderer } from "@package/net/minecraft/client/gui/components";
+import { $MobEffect } from "@package/net/minecraft/world/effect";
+import { $TextureAtlasExtension } from "@package/foundry/veil/ext";
+import { $Splitter } from "@package/com/google/common/base";
+import { $BuiltInPackSource, $KnownPack } from "@package/net/minecraft/server/packs/repository";
+import { $ResourceLocation_, $ResourceLocation } from "@package/net/minecraft/resources";
+import { $MinecraftSessionService } from "@package/com/mojang/authlib/minecraft";
+import { $DirectoryValidator } from "@package/net/minecraft/world/level/validation";
+export * as model from "@package/net/minecraft/client/resources/model";
+export * as metadata from "@package/net/minecraft/client/resources/metadata";
+export * as sounds from "@package/net/minecraft/client/resources/sounds";
+export * as server from "@package/net/minecraft/client/resources/server";
+export * as language from "@package/net/minecraft/client/resources/language";
+
+declare module "@package/net/minecraft/client/resources" {
+    export class $PlayerSkin$Model extends $Enum<$PlayerSkin$Model> {
+        static byName(arg0: string): $PlayerSkin$Model;
+        static values(): $PlayerSkin$Model[];
+        static valueOf(arg0: string): $PlayerSkin$Model;
+        id(): string;
+        static SLIM: $PlayerSkin$Model;
+        static WIDE: $PlayerSkin$Model;
+    }
+    /**
+     * Values that may be interpreted as {@link $PlayerSkin$Model}.
+     */
+    export type $PlayerSkin$Model_ = "slim" | "wide";
+    export class $SplashManager extends $SimplePreparableReloadListener<$List<string>> implements $SplashManagerAccessor {
+        getSplash(): $SplashRenderer;
+        getSplashes(): $List<any>;
+        static SPLASHES_LOCATION: $ResourceLocation;
+        user: $User;
+        constructor(arg0: $User);
+        get splash(): $SplashRenderer;
+        get splashes(): $List<any>;
+    }
+    export class $GrassColorReloadListener extends $SimplePreparableReloadListener<number[]> {
+        constructor();
+    }
+    export class $TextureAtlasHolder implements $PreparableReloadListener, $AutoCloseable, $TextureAtlasExtension {
+        getSprite(arg0: $ResourceLocation_): $TextureAtlasSprite;
+        veil$hasTexture(arg0: $ResourceLocation_): boolean;
+        reload(arg0: $PreparableReloadListener$PreparationBarrier_, arg1: $ResourceManager, arg2: $ProfilerFiller, arg3: $ProfilerFiller, arg4: $Executor_, arg5: $Executor_): $CompletableFuture<void>;
+        close(): void;
+        getName(): string;
+        constructor(arg0: $TextureManager, arg1: $ResourceLocation_, arg2: $ResourceLocation_);
+        constructor(arg0: $TextureManager, arg1: $ResourceLocation_, arg2: $ResourceLocation_, arg3: $Set_<$MetadataSectionSerializer<never>>);
+        get name(): string;
+    }
+    export class $IndexedAssetSource {
+        static createIndexFs(arg0: $Path_, arg1: string): $Path;
+        static PATH_SPLITTER: $Splitter;
+        constructor();
+    }
+    export class $SkinManager$TextureCache {
+    }
+    export class $MobEffectTextureManager extends $TextureAtlasHolder {
+        get(arg0: $Holder_<$MobEffect>): $TextureAtlasSprite;
+        constructor(arg0: $TextureManager);
+    }
+    export class $PaintingTextureManager extends $TextureAtlasHolder {
+        getBackSprite(): $TextureAtlasSprite;
+        get(arg0: $PaintingVariant_): $TextureAtlasSprite;
+        constructor(arg0: $TextureManager);
+        get backSprite(): $TextureAtlasSprite;
+    }
+    export class $FoliageColorReloadListener extends $SimplePreparableReloadListener<number[]> {
+        constructor();
+    }
+    export class $LegacyStuffWrapper {
+        /**
+         * @deprecated
+         */
+        static getPixels(arg0: $ResourceManager, arg1: $ResourceLocation_): number[];
+        constructor();
+    }
+    export class $MapDecorationTextureManager extends $TextureAtlasHolder {
+        get(arg0: $MapDecoration_): $TextureAtlasSprite;
+        constructor(arg0: $TextureManager);
+    }
+    export class $SkinManager$CacheKey extends $Record {
+    }
+    /**
+     * Values that may be interpreted as {@link $SkinManager$CacheKey}.
+     */
+    export type $SkinManager$CacheKey_ = { profileId?: $UUID_, packedTextures?: $Property_,  } | [profileId?: $UUID_, packedTextures?: $Property_, ];
+    export class $DefaultPlayerSkin {
+        static getDefaultTexture(): $ResourceLocation;
+        static get(arg0: $UUID_): $PlayerSkin;
+        static get(arg0: $GameProfile): $PlayerSkin;
+        constructor();
+        static get defaultTexture(): $ResourceLocation;
+    }
+    export class $PlayerSkin extends $Record {
+        textureUrl(): string;
+        elytraTexture(): $ResourceLocation;
+        texture(): $ResourceLocation;
+        model(): $PlayerSkin$Model;
+        capeTexture(): $ResourceLocation;
+        secure(): boolean;
+        constructor(arg0: $ResourceLocation_, arg1: string, arg2: $ResourceLocation_, arg3: $ResourceLocation_, arg4: $PlayerSkin$Model_, arg5: boolean);
+    }
+    /**
+     * Values that may be interpreted as {@link $PlayerSkin}.
+     */
+    export type $PlayerSkin_ = { model?: $PlayerSkin$Model_, elytraTexture?: $ResourceLocation_, capeTexture?: $ResourceLocation_, texture?: $ResourceLocation_, textureUrl?: string, secure?: boolean,  } | [model?: $PlayerSkin$Model_, elytraTexture?: $ResourceLocation_, capeTexture?: $ResourceLocation_, texture?: $ResourceLocation_, textureUrl?: string, secure?: boolean, ];
+    export class $SkinManager {
+        getOrLoad(arg0: $GameProfile): $CompletableFuture<$PlayerSkin>;
+        getInsecureSkin(arg0: $GameProfile): $PlayerSkin;
+        lookupInsecure(arg0: $GameProfile): $Supplier<$PlayerSkin>;
+        constructor(arg0: $TextureManager, arg1: $Path_, arg2: $MinecraftSessionService, arg3: $Executor_);
+    }
+    export class $ClientPackSource extends $BuiltInPackSource {
+        static createVanillaPackSource(arg0: $Path_): $VanillaPackResources;
+        static HIGH_CONTRAST_PACK: string;
+        static VANILLA_ID: string;
+        static CORE_PACK_INFO: $KnownPack;
+        constructor(arg0: $Path_, arg1: $DirectoryValidator);
+    }
+}

@@ -1,0 +1,66 @@
+import { $Level_ } from "@package/net/minecraft/world/level";
+import { $ItemStack, $Item$Properties, $Item, $ItemStack_ } from "@package/net/minecraft/world/item";
+import { $ScreenParticleHolder } from "@package/team/lodestar/lodestone/systems/particle/screen";
+import { $TextColor, $Style } from "@package/net/minecraft/network/chat";
+import { $ParticleEmitterHandler$ItemParticleSupplier } from "@package/team/lodestar/lodestone/handlers/screenparticle";
+import { $Map } from "@package/java/util";
+import { $ColorParticleDataBuilder } from "@package/team/lodestar/lodestone/systems/particle/data/color";
+import { $SpiritHolder } from "@package/com/sammy/malum/core/systems/registry";
+import { $Holder } from "@package/net/minecraft/core";
+import { $SpiritLike_, $SpiritArcanaType_, $SpiritLike, $SpiritArcanaType } from "@package/com/sammy/malum/core/systems/spirit/type";
+import { $ResourceLocation } from "@package/net/minecraft/resources";
+import { $Color } from "@package/java/awt";
+import { $Block } from "@package/net/minecraft/world/level/block";
+
+declare module "@package/com/sammy/malum/common/item/spirit" {
+    export class $SpiritShardItem extends $Item implements $ParticleEmitterHandler$ItemParticleSupplier, $SpiritLike {
+        getSpirit(): $SpiritArcanaType;
+        getSpiritHolder(): $SpiritHolder<$SpiritArcanaType>;
+        spawnLateParticles(arg0: $ScreenParticleHolder, arg1: $Level_, arg2: number, arg3: $ItemStack_, arg4: number, arg5: number): void;
+        spawnEarlyParticles(arg0: $ScreenParticleHolder, arg1: $Level_, arg2: number, arg3: $ItemStack_, arg4: number, arg5: number): void;
+        getStyle(arg0: boolean): $Style;
+        getStyle(arg0: number): $Style;
+        getTextColor(arg0: number): $TextColor;
+        getTextColor(arg0: boolean): $TextColor;
+        getRegistryName(): $ResourceLocation;
+        createColorData(): $ColorParticleDataBuilder;
+        createColorData(arg0: number): $ColorParticleDataBuilder;
+        getLangKey(): string;
+        getSpiritShard(): $SpiritShardItem;
+        getAnalogSignal(): number;
+        getSpiritStack(arg0: number): $ItemStack;
+        getSpiritStack(): $ItemStack;
+        getAlphaMultiplier(): number;
+        getItemColor(): $Color;
+        getCountedKey(): string;
+        getFlavourKey(): string;
+        getSecondaryColor(): $Color;
+        getPrimaryColor(): $Color;
+        getHolder(): $Holder<$SpiritArcanaType>;
+        getName(): string;
+        matches(arg0: $SpiritLike_): boolean;
+        static BASE_ATTACK_DAMAGE_ID: $ResourceLocation;
+        static DEFAULT_MAX_STACK_SIZE: number;
+        descriptionId: string;
+        static MAX_BAR_WIDTH: number;
+        static BASE_ATTACK_SPEED_ID: $ResourceLocation;
+        static ABSOLUTE_MAX_STACK_SIZE: number;
+        craftingRemainingItem: $Item;
+        static BY_BLOCK: $Map<$Block, $Item>;
+        constructor(arg0: $Item$Properties, arg1: $SpiritHolder<$SpiritArcanaType_>);
+        get spirit(): $SpiritArcanaType;
+        get spiritHolder(): $SpiritHolder<$SpiritArcanaType>;
+        get registryName(): $ResourceLocation;
+        get langKey(): string;
+        get spiritShard(): $SpiritShardItem;
+        get analogSignal(): number;
+        get alphaMultiplier(): number;
+        get itemColor(): $Color;
+        get countedKey(): string;
+        get flavourKey(): string;
+        get secondaryColor(): $Color;
+        get primaryColor(): $Color;
+        get holder(): $Holder<$SpiritArcanaType>;
+        get name(): string;
+    }
+}

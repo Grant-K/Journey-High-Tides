@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "supplementaries:item/way_signs/spectrum/way_sign_chestnut_noxwood"
+  }
+}

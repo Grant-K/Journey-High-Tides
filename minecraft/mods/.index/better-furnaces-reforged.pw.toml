@@ -1,0 +1,16 @@
+filename = 'BetterFurnacesReforged-1.21.1-1.1.2518.1-neoforge.jar'
+name = 'Better Furnaces Reforged'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'beta'
+
+[download]
+hash = 'd99c34512af464d729b8e59eeba5d1421742d8d7924226936b83489f7bce71db9c0f1dfface2b977a180bcca244db81170cc053998e72f1a4e9d3ba81695e4d6'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/ZXOYCX2A/versions/YUwxtJ8j/BetterFurnacesReforged-1.21.1-1.1.2518.1-neoforge.jar'
+
+[update.modrinth]
+mod-id = 'ZXOYCX2A'
+version = 'YUwxtJ8j'

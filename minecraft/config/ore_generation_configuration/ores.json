@@ -1,0 +1,121 @@
+[
+  {
+    "id": "deny_copper_in_starter_frontier",
+    "enabled": true,
+    "blocks": [
+      "minecraft:copper_ore",
+      "minecraft:deepslate_copper_ore"
+    ],
+    "dimension_whitelist": [
+      "minecraft:overworld"
+    ],
+    "area_whitelist": [
+      "frontier_0"
+    ],
+    "keep_chance": 0.0,
+    "replacement": "auto",
+    "priority": 10
+  },
+  {
+    "id": "deny_iron_before_frontier_2",
+    "enabled": true,
+    "blocks": [
+      "minecraft:iron_ore",
+      "minecraft:deepslate_iron_ore"
+    ],
+    "dimension_whitelist": [
+      "minecraft:overworld"
+    ],
+    "area_whitelist": [
+      "frontier_1"
+    ],
+    "keep_chance": 0.0,
+    "replacement": "auto",
+    "priority": 20
+  },
+  {
+    "id": "reduce_gold_before_frontier_3",
+    "enabled": true,
+    "blocks": [
+      "minecraft:gold_ore",
+      "minecraft:deepslate_gold_ore"
+    ],
+    "dimension_whitelist": [
+      "minecraft:overworld"
+    ],
+    "area_whitelist": [
+      "frontier_2"
+    ],
+    "keep_chance": 0.25,
+    "replacement": "auto",
+    "priority": 30
+  },
+  {
+    "id": "deny_diamond_before_frontier_5",
+    "enabled": true,
+    "blocks": [
+      "minecraft:diamond_ore",
+      "minecraft:deepslate_diamond_ore"
+    ],
+    "dimension_whitelist": [
+      "minecraft:overworld"
+    ],
+    "area_whitelist": [
+      "frontier_4"
+    ],
+    "keep_chance": 0.0,
+    "replacement": "auto",
+    "priority": 40
+  },
+  {
+    "id": "deny_redstone_before_frontier_4",
+    "enabled": true,
+    "blocks": [
+      "minecraft:redstone_ore",
+      "minecraft:deepslate_redstone_ore"
+    ],
+    "dimension_whitelist": [
+      "minecraft:overworld"
+    ],
+    "area_whitelist": [
+      "frontier_3"
+    ],
+    "keep_chance": 0.0,
+    "replacement": "auto",
+    "priority": 50
+  },
+  {
+    "id": "deny_lapis_before_frontier_4",
+    "enabled": true,
+    "blocks": [
+      "minecraft:lapis_ore",
+      "minecraft:deepslate_lapis_ore"
+    ],
+    "dimension_whitelist": [
+      "minecraft:overworld"
+    ],
+    "area_whitelist": [
+      "frontier_3"
+    ],
+    "keep_chance": 0.0,
+    "replacement": "auto",
+    "priority": 60
+  },
+  {
+    "id": "deny_create_zinc_before_frontier_2",
+    "enabled": true,
+    "blocks": [
+      "create:zinc_ore",
+      "create:deepslate_zinc_ore"
+    ],
+    "dimension_whitelist": [
+      "minecraft:overworld"
+    ],
+    "area_whitelist": [
+      "frontier_1"
+    ],
+    "keep_chance": 0.0,
+    "replacement": "auto",
+    "priority": 70
+  }
+]

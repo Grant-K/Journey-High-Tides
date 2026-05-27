@@ -1,0 +1,29 @@
+import { $MinimapSession } from "@package/xaero/hud/minimap/module";
+import { $MinimapWorld } from "@package/xaero/hud/minimap/world";
+import { $ClientPacketListener } from "@package/net/minecraft/client/multiplayer";
+import { $MinimapWorldContainer, $MinimapWorldRootContainer } from "@package/xaero/hud/minimap/world/container";
+import { $Path_, $Path } from "@package/java/nio/file";
+import { $HudMod } from "@package/xaero/common";
+import { $RootConfigIO } from "@package/xaero/hud/minimap/world/container/config/io";
+
+declare module "@package/xaero/hud/minimap/world/io" {
+    export class $MinimapWorldManagerIO {
+        loadAllWorlds(arg0: $MinimapSession): void;
+        convertWorldDimFilesToFolders(): void;
+        convertWorldDimFoldersToSingleFolder(arg0: $MinimapSession): void;
+        loadWorldFile(arg0: $MinimapWorldContainer, arg1: string, arg2: $Path_): boolean;
+        static copyTempFilesBack(arg0: $Path_): void;
+        checkWorldFileLine(arg0: string[], arg1: $MinimapWorld): boolean;
+        onRootContainerAdded(arg0: $MinimapWorldRootContainer): void;
+        saveWorld(arg0: $MinimapWorld): void;
+        saveWorld(arg0: $MinimapWorld, arg1: boolean): void;
+        saveWorlds(arg0: $MinimapWorldContainer): void;
+        getRootConfigIO(): $RootConfigIO;
+        getWorldFile(arg0: $MinimapWorld): $Path;
+        loadWorldsFromAllSources(arg0: $MinimapSession, arg1: $ClientPacketListener): void;
+        saveAllWorlds(arg0: $MinimapSession): void;
+        loadWorld(arg0: $MinimapWorld, arg1: $Path_): void;
+        constructor(arg0: $HudMod);
+        get rootConfigIO(): $RootConfigIO;
+    }
+}

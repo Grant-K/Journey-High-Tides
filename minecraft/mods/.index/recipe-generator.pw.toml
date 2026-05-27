@@ -1,0 +1,16 @@
+filename = 'recipe_generator-1.1.0_beta-neoforge-1.21.1.jar'
+name = 'Recipe Generator'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'beta'
+
+[download]
+hash = '01cabc3eec1f4682a97d82ba51336e4325528832de8f8e7b7fb2bbce5207e4d58c82ca89e24e49e5dc1940a80d4caef687e0fc83e26bc14a87e9e40fe72cb1a7'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/uQorKjjW/versions/BxAYspK9/recipe_generator-1.1.0_beta-neoforge-1.21.1.jar'
+
+[update.modrinth]
+mod-id = 'uQorKjjW'
+version = 'BxAYspK9'

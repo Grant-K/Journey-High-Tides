@@ -1,0 +1,32 @@
+filename = 'grim-kingdoms-lost-structures-ruins-v1.0.3 1.21.jar'
+name = 'Grim kingdoms: Lost structures & ruins'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge', 'forge', 'quilt', 'fabric' ]
+x-prismlauncher-mc-versions = [
+    '1.21',
+    '1.21.1',
+    '1.21.10',
+    '1.21.11',
+    '1.21.2',
+    '1.21.3',
+    '1.21.4',
+    '1.21.5',
+    '1.21.6',
+    '1.21.7',
+    '1.21.8',
+    '1.21.9',
+    '26.1',
+    '26.1.1',
+    '26.1.2'
+]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '45abf5eb3f5a6c1c936c7ca71a3b7711688ef2ad50178b17027926ba6ac948aa91bb674623c5a05ea0ef68e08620429ceaa1526ea4f406cbb49421d9ad96c07e'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/f4d4E9De/versions/SJSK4VBR/grim-kingdoms-lost-structures-ruins-v1.0.3.jar'
+
+[update.modrinth]
+mod-id = 'f4d4E9De'
+version = 'SJSK4VBR'

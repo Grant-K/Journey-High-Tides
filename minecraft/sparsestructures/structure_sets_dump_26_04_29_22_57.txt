@@ -1,0 +1,1512 @@
+{
+  "structure": "ae2:meteorite",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "aether:bronze_dungeon",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "aether:large_aercloud",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "aether:silver_and_gold_dungeons",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "ancientstructures:german_buildings",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "ancientstructures:japanese_buildings",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "ancientstructures:mayan_buildings",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "ancientstructures:roman_buildings",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "apotheosis:towers",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "ati_structures:aboveground_large",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "ati_structures:aboveground_medium",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "ati_structures:aboveground_small",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "ati_structures:rare",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "ati_structures:underground_medium",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "ati_structures:underground_small",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "cataclysm:abandoned_structures",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "cataclysm:acropolis",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "cataclysm:amethyst_nest",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "cataclysm:ancient_factory",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "cataclysm:burning_arena",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "cataclysm:cursed_pyramid",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "cataclysm:desert_structures",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "cataclysm:frosted_prison",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "cataclysm:ruined_citadel",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "cataclysm:small_integrated_cataclysm",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "cataclysm:soul_black_smith",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "cataclysm:sunken_city",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_easy_structures:big_1",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_easy_structures:big_2",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_easy_structures:camp_1",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_easy_structures:camp_2",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_easy_structures:camp_3",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_easy_structures:camp_4",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_easy_structures:camp_5",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_easy_structures:factory_1",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_easy_structures:factory_2",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_easy_structures:foresttracks",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_easy_structures:freight_station",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_easy_structures:house_2",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_easy_structures:house_3",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_easy_structures:house_4",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_easy_structures:undergroundtrain",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_easy_structures:windmill",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_rustic_structures:rustic_barn",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_rustic_structures:rustic_smithy",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_rustic_structures:rustic_well",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_rustic_structures:rustic_windmill",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:chocolate_pit",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:create_bastion",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:create_copper_statue",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:create_dungeon_base",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:create_ruined_castle",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:createairdrop",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:createcontainer",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:createcushercrane",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:createdesertwell",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:createfluidtank",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:createhouse",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:createlittleman",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:createlosttrainstation",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:createminiskyvillage",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:createmonsterroom",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:createoldruine",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:createpickaxestatue",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:createwitchhut",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:crimsite_tower",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:darkcastle",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:deadlordshouse",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:honey_pit",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:minetrain",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:obsidiantemple",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:pillager_boat",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:pillagersteampunkairship",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:towerofochrum",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "create_structures_arise:windmill",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "grim_kingdoms:snowy",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "idas:idas_common",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "idas:idas_nether",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "idas:idas_ocean",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "idas:idas_rare",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "idas:idas_small",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "idas:idas_small_nether",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "idas:idas_underground",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "idas:idas_underground_rare",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "integrated_stronghold:stronghold",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "irons_spellbooks:ancient_battleground",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "irons_spellbooks:catacombs",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "irons_spellbooks:citadel",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "irons_spellbooks:evoker_fort",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "irons_spellbooks:ice_spider_den",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "irons_spellbooks:impaled_icebreaker",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "irons_spellbooks:mangrove_hut",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "irons_spellbooks:mountain_tower",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "irons_spellbooks:pyromancer_tower",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "jurassicreborn:abandoned_paddock",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "jurassicreborn:amber_mine",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "jurassicreborn:desert_digsite",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "jurassicreborn:ice_fossil_digsite",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "jurassicreborn:isla_sorna_lab",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "jurassicreborn:jp_san_diego",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "jurassicreborn:raptor_paddock",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "jurassicreborn:visitor_centre",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "malum:weeping_well",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "meadow:chalet",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "meadow:chapel",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "meadow:logging_camp",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "meadow:monument",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "meadow:observation_post",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:astral_hideaway",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:astral_meteorite",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:ender_spire",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:enderbloom_grove",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:enderkeep_courtyard",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:enderpin_spikes",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:enderskog",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:enderwatch_tower",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:endscraps",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:manuscript_shrine",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:mega_ship",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:mega_ship_basic",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:mega_ship_crashed",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:mega_ship_crashed_2",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:mega_ship_crashed_deepslate",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:mega_ship_deepslate",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:mega_ship_deepslate_2",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:mega_ship_deepslate_3",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:monolith",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:mystical_archway",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:mythic_garden",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:phantom_citadel",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:placid_prairie",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:ruined_pillar",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mes:starlight_voyager",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "minecraft:ancient_cities",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "minecraft:buried_treasures",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "minecraft:desert_pyramids",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "minecraft:end_cities",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "minecraft:igloos",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "minecraft:jungle_temples",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "minecraft:mineshafts",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "minecraft:nether_complexes",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "minecraft:nether_fossils",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "minecraft:ocean_monuments",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "minecraft:ocean_ruins",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "minecraft:pillager_outposts",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "minecraft:ruined_portals",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "minecraft:shipwrecks",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "minecraft:swamp_huts",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "minecraft:trail_ruins",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "minecraft:trial_chambers",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "minecraft:villages",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "minecraft:woodland_mansions",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:bridge_1",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:bridge_2",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:bridge_3",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:bridge_4",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:bridge_5",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:bridge_6",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:circle_blackstone",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:circle_nether_brick",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:copper_tower",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:crimson_forge",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:crimson_lava_well",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:giant_skull",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:grave_yard",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:large_blackstone_pillars",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:large_blackstone_walls",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:large_house_1",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:large_nether_brick",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:lava_pool",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:leafy_rubble",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:medium_blackstone",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:medium_crimson_fungus",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:medium_crimson_fungus_2",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:medium_crimson_well",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:medium_house",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:medium_house_2",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:medium_warped_fungus",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:medium_warped_fungus_2",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:medium_warped_well",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:nether_tower",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:nether_wart_farm",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:ruined_portal",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:sandy_skull",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:shrine",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:small_nether_brick",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:smoking_shrine",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:soul_fire",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:sword",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:train",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:very_small_blackstone",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:very_small_blackstone_2",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:very_small_blackstone_3",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:very_small_blackstone_4",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:very_small_nether_brick",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:very_small_nether_brick_2",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:very_small_nether_brick_3",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:warped_dome",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:warped_house",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mns:warped_pool",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:arena",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:birch_river",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:calcite_house",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:castle_ruin",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:castle_tower",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:cherry_river",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:desert_pyramid",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:desert_well",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:diorite_house",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:frozen_pond",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:jungle",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:large_tower",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:leaf_hollow",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:mangrove",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:muddy_water_hole",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:mushroom",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:nether_portal",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:palm_island",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:red_sand",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:small_deepslate_house",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:small_oak_house",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:small_pond",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:small_tower",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:spruce_huts",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:taiga",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:tree_1",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:tree_2",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:tree_3",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:tree_4",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:tree_5",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:tree_6",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:tree_7",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:tree_8",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:volcano",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mss:white_house",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:acacia_log_pile",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:acacia_tree",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:azelea_house",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:barn",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:beach_bar",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:bee_dome",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:bench",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:big_oak_tree",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:birch_log_pile",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:birch_tree",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:boulder",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:campsite",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:cart",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:cartographer_tower",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:castle_ruins",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:cathedral",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:cherry_tree",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:crimson_enchanting_table",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:crystal",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:dark_oak_log_pile",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:dark_oak_tree",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:dead_tree_acacia",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:dead_tree_birch",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:dead_tree_cherry",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:dead_tree_dark_oak",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:dead_tree_jungle",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:dead_tree_mangrove",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:dead_tree_oak",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:deepslate_house",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:desert_house",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:desert_pump",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:duck",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:end_scraps_1",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:end_scraps_2",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:end_scraps_3",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:end_scraps_4",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:end_well",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:fire_camp",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:floating_islands",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:flower_hole",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:fox_hut",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:gallows",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:haystack",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:horse_campsite",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:horse_pen",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:house",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:jungle_log_pile",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:jungle_palm_tree",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:jungle_tower",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:jungle_tree",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:lamp_chest",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:large_cart_1",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:large_cart_2",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:large_floating_island",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:large_mushroom",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:large_warped_tower",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:lecturn_garden",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:log_ruin",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:medium_bamboo_cart",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:medium_igloo_1",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:medium_oak_lantern",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:mine_with_campsite",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:mineshaft",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:mushroom_pond",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:mushroom_statue",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:mushroom_well",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:nether_devil",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:nether_well",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:oak_log_pile",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:oak_tree",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:ocean_tower",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:other_wells",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:out_house",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:paths",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:pile",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:railway",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:rare_well",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:red_tower",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:ruined_beacon",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:shed",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:small_acacia_lantern",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:small_bamboo_lantern",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:small_birch_lantern",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:small_campfire_lantern",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:small_cherry_lantern",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:small_dark_oak_lantern",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:small_igloo",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:small_jungle_lantern",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:small_mangrove_lantern",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:small_oak_lantern",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:small_oak_pond",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:small_pillager_tower",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:small_ruin",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:small_ship",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:small_spruce_lantern",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:small_swamp_house",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:small_tower_well",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:snowy_dog_hut",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:snowy_fossil",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:spruce_log_pile",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:spruce_tree",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:stalls",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:statue_ruins",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:stone_fountain",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:stone_pillars",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:stone_rock",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:sunzi_gate",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:tall_house",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:tree_monument",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:villager_statue",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:warped_house",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:wheat_grain_bin",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:windmill",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "mvs:wooden_wheat_farm",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "spectrum:city_below",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "spectrum:excavation_site",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "spectrum:lizard_den",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "spectrum:pedestal_ruins_deepslate",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "spectrum:pedestal_ruins_stone",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "spectrum:preservation_ruins",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "spectrum:undergrowth_manor",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "supplementaries:galleons",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "supplementaries:road_signs",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "the_bumblezone:bumbling_beepartments",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "the_bumblezone:cell_maze",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "the_bumblezone:cherry_veteran_tree",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "the_bumblezone:hanging_structures",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "the_bumblezone:honey_cave_room",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "the_bumblezone:main_structures",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "the_bumblezone:pollinated_stream",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "the_bumblezone:sempiternal_sanctums",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "the_bumblezone:throne_pillar",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "the_bumblezone:tiny_structures",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "tombstone:abandoned_grave",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "undergroundworlds:archives",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "undergroundworlds:chillager_outposts",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "undergroundworlds:desert_pyramids",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "undergroundworlds:ice_dungeons",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "undergroundworlds:jungle_temples",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "undergroundworlds:jungle_treehouses",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "undergroundworlds:spider_caves_houses",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "undergroundworlds:swamp_houses",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},
+{
+  "structure": "undergroundworlds:tundra_houses",
+  "factor": 1//REPLACE WITH YOUR CUSTOM SPREADING FACTOR HERE
+},

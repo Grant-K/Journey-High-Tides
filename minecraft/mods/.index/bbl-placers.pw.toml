@@ -1,0 +1,16 @@
+filename = 'placers-1.21.1-1.3.1.jar'
+name = 'BBL Placers'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '71ed82ef2df11aafd9cb8696731e1e01c520f8e0ff24b93f21f4460a9c96906ea67311749fac6f95f811c6947fb094e89c7d6a2971776b4d91af60b64f2e4896'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/9PYcJ3Zw/versions/yammjxQ6/placers-1.21.1-1.3.1.jar'
+
+[update.modrinth]
+mod-id = '9PYcJ3Zw'
+version = 'yammjxQ6'

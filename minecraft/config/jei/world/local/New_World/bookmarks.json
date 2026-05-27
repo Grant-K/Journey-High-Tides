@@ -1,0 +1,11 @@
+[
+  {"version":2},
+  {"ingredient":{"id":"createdieselgenerators:hammer"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"minecraft:iron_ingot"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"createbigcannons:big_cartridge","components":{"createbigcannons:power":1,"minecraft:lore":["{\"translate\":\"tooltip.createbigcannons.jei_info.added_power\"}"]}},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"betterfurnacesreforged:diamond_furnace"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"betterfurnacesreforged:ultimate_ore_processing_upgrade"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"create:crushed_raw_iron"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"minecraft:raw_iron"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"minecraft:grass_block"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

@@ -1,0 +1,107 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "the_journey_reborn"
+	group: ""
+	id: "4AEC50DD960A89FD"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "5316EF06AD8BD7C1"
+			rewards: [{
+				count: 8
+				id: "4F26680881B2C588"
+				item: {
+					count: 1
+					id: "minecraft:apple"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "minecraft:story/root"
+				criterion: ""
+				disable_toast: true
+				icon: {
+					id: "immersivepetroleum:upgrade_reinforced_hull"
+				}
+				id: "66DDEBEF3BAF0DC9"
+				type: "advancement"
+			}]
+			x: -0.5d
+			y: -2.5d
+		}
+		{
+			id: "7576C11CAD4EF292"
+			tasks: [{
+				id: "440D946377AB09AC"
+				type: "checkmark"
+			}]
+			x: -0.5d
+			y: -1.0d
+		}
+		{
+			id: "746AE0EA99323DEA"
+			tasks: [{
+				id: "4A556E07BC25B791"
+				type: "checkmark"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			id: "2F6F1248E5C7C957"
+			tasks: [{
+				id: "20430F17DF544C38"
+				type: "checkmark"
+			}]
+			x: 0.5d
+			y: -1.0d
+		}
+		{
+			id: "3FC60CCB8EE40274"
+			tasks: [{
+				id: "4C949E208759982E"
+				type: "checkmark"
+			}]
+			x: -1.5d
+			y: -1.0d
+		}
+		{
+			id: "4239F89B6F471D57"
+			tasks: [{
+				id: "6B1389958DE46CDD"
+				type: "checkmark"
+			}]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			id: "67B15EF9A2B5E448"
+			tasks: [{
+				id: "0BD86603757EB714"
+				type: "checkmark"
+			}]
+			x: -1.5d
+			y: 1.0d
+		}
+		{
+			id: "168A0785876D42EB"
+			tasks: [{
+				id: "721EF04043BD272B"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "32C7CFCE861342F8"
+			tasks: [{
+				id: "7A1B7EE34FFEB76B"
+				type: "checkmark"
+			}]
+			x: 1.0d
+			y: 0.0d
+		}
+	]
+}

@@ -1,0 +1,6 @@
+#47F minecraft:birch_forest
+#3D6 minecraft:cold_ocean
+#010 minecraft:forest
+#1DF minecraft:old_growth_birch_forest
+#5FF minecraft:river
+#169 minecraft:taiga

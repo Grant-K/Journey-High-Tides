@@ -1,0 +1,5 @@
+[
+  {"version":1},
+  {"ingredient":{"id":"simplyswords:runic_sai"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"malum:mending_diffuser"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

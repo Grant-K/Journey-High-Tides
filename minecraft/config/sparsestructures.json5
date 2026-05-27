@@ -1,0 +1,557 @@
+// ### THE MOD REQUIRES A RESTART OF THE GAME TO APPLY CHANGES ###
+{
+  // Lower base spread factor so exploration is more rewarding
+  // 1.25 = everything is 25% rarer than vanilla (down from 2x)
+  "spreadFactor": 1.25,
+
+  // Fix structure overlap from mods that share salts
+  "idBasedSalt": true,
+
+  "customSpreadFactors": [
+    // === OCEAN & SHIPS — core for naval exploration ===
+    {
+      "structure": "minecraft:shipwrecks",
+      "factor": 0.5
+    },
+    {
+      "structure": "minecraft:ocean_ruins",
+      "factor": 0.6
+    },
+    {
+      "structure": "minecraft:buried_treasures",
+      "factor": 0.7
+    },
+    {
+      "structure": "supplementaries:galleons",
+      "factor": 0.5
+    },
+    {
+      "structure": "supplementaries:road_signs",
+      "factor": 0.4
+    },
+
+    // === VILLAGES & PORTS — trading hubs for Create supply chains ===
+    {
+      "structure": "minecraft:villages",
+      "factor": 0.6
+    },
+    {
+      "structure": "minecraft:pillager_outposts",
+      "factor": 0.7
+    },
+
+    // === UNDERGROUND EXPLORATION ===
+    {
+      "structure": "minecraft:mineshafts",
+      "factor": 0.5
+    },
+    {
+      "structure": "minecraft:trail_ruins",
+      "factor": 0.7
+    },
+    {
+      "structure": "minecraft:ancient_cities",
+      "factor": 1.5
+    },
+    {
+      "structure": "minecraft:trial_chambers",
+      "factor": 0.8
+    },
+
+    // === SPECTRUM — progression structures ===
+    {
+      "structure": "spectrum:city_below",
+      "factor": 0.8
+    },
+    {
+      "structure": "spectrum:excavation_site",
+      "factor": 0.7
+    },
+    {
+      "structure": "spectrum:lizard_den",
+      "factor": 0.8
+    },
+    {
+      "structure": "spectrum:pedestal_ruins_deepslate",
+      "factor": 0.7
+    },
+    {
+      "structure": "spectrum:pedestal_ruins_stone",
+      "factor": 0.7
+    },
+    {
+      "structure": "spectrum:preservation_ruins",
+      "factor": 0.8
+    },
+    {
+      "structure": "spectrum:undergrowth_manor",
+      "factor": 1.0
+    },
+
+    // === CATACLYSM — boss arenas, keep rare for end-game ===
+    {
+      "structure": "cataclysm:abandoned_structures",
+      "factor": 1.0
+    },
+    {
+      "structure": "cataclysm:acropolis",
+      "factor": 2.5
+    },
+    {
+      "structure": "cataclysm:amethyst_nest",
+      "factor": 1.5
+    },
+    {
+      "structure": "cataclysm:ancient_factory",
+      "factor": 2.0
+    },
+    {
+      "structure": "cataclysm:burning_arena",
+      "factor": 2.0
+    },
+    {
+      "structure": "cataclysm:cursed_pyramid",
+      "factor": 1.5
+    },
+    {
+      "structure": "cataclysm:desert_structures",
+      "factor": 1.0
+    },
+    {
+      "structure": "cataclysm:frosted_prison",
+      "factor": 2.0
+    },
+    {
+      "structure": "cataclysm:ruined_citadel",
+      "factor": 2.0
+    },
+    {
+      "structure": "cataclysm:small_integrated_cataclysm",
+      "factor": 0.8
+    },
+    {
+      "structure": "cataclysm:soul_black_smith",
+      "factor": 2.0
+    },
+    {
+      "structure": "cataclysm:sunken_city",
+      "factor": 1.0
+    },
+
+    // === IRON'S SPELLBOOKS — magic exploration ===
+    {
+      "structure": "irons_spellbooks:ancient_battleground",
+      "factor": 1.5
+    },
+    {
+      "structure": "irons_spellbooks:catacombs",
+      "factor": 0.7
+    },
+    {
+      "structure": "irons_spellbooks:citadel",
+      "factor": 2.0
+    },
+    {
+      "structure": "irons_spellbooks:evoker_fort",
+      "factor": 1.0
+    },
+    {
+      "structure": "irons_spellbooks:ice_spider_den",
+      "factor": 0.8
+    },
+    {
+      "structure": "irons_spellbooks:impaled_icebreaker",
+      "factor": 0.8
+    },
+    {
+      "structure": "irons_spellbooks:mangrove_hut",
+      "factor": 0.6
+    },
+    {
+      "structure": "irons_spellbooks:mountain_tower",
+      "factor": 0.8
+    },
+    {
+      "structure": "irons_spellbooks:pyromancer_tower",
+      "factor": 0.8
+    },
+
+    // === THE BUMBLEZONE — dimension exploration ===
+    {
+      "structure": "the_bumblezone:bumbling_beepartments",
+      "factor": 0.7
+    },
+    {
+      "structure": "the_bumblezone:cell_maze",
+      "factor": 0.8
+    },
+    {
+      "structure": "the_bumblezone:hanging_structures",
+      "factor": 0.6
+    },
+    {
+      "structure": "the_bumblezone:honey_cave_room",
+      "factor": 0.7
+    },
+    {
+      "structure": "the_bumblezone:main_structures",
+      "factor": 0.8
+    },
+    {
+      "structure": "the_bumblezone:pollinated_stream",
+      "factor": 0.7
+    },
+    {
+      "structure": "the_bumblezone:sempiternal_sanctums",
+      "factor": 1.5
+    },
+    {
+      "structure": "the_bumblezone:throne_pillar",
+      "factor": 1.5
+    },
+    {
+      "structure": "the_bumblezone:tiny_structures",
+      "factor": 0.5
+    },
+
+    // === AETHER — sky dimension ===
+    {
+      "structure": "aether:bronze_dungeon",
+      "factor": 0.8
+    },
+    {
+      "structure": "aether:large_aercloud",
+      "factor": 0.7
+    },
+    {
+      "structure": "aether:silver_and_gold_dungeons",
+      "factor": 1.0
+    },
+
+    // === CREATE STRUCTURES — world theming ===
+    {
+      "structure": "create_easy_structures:big_1",
+      "factor": 0.8
+    },
+    {
+      "structure": "create_easy_structures:big_2",
+      "factor": 0.8
+    },
+    {
+      "structure": "create_easy_structures:camp_1",
+      "factor": 0.6
+    },
+    {
+      "structure": "create_easy_structures:camp_2",
+      "factor": 0.6
+    },
+    {
+      "structure": "create_easy_structures:camp_3",
+      "factor": 0.6
+    },
+    {
+      "structure": "create_easy_structures:camp_4",
+      "factor": 0.6
+    },
+    {
+      "structure": "create_easy_structures:camp_5",
+      "factor": 0.6
+    },
+    {
+      "structure": "create_easy_structures:factory_1",
+      "factor": 0.7
+    },
+    {
+      "structure": "create_easy_structures:factory_2",
+      "factor": 0.7
+    },
+    {
+      "structure": "create_easy_structures:freight_station",
+      "factor": 0.7
+    },
+    {
+      "structure": "create_easy_structures:house_2",
+      "factor": 0.6
+    },
+    {
+      "structure": "create_easy_structures:house_3",
+      "factor": 0.6
+    },
+    {
+      "structure": "create_easy_structures:house_4",
+      "factor": 0.6
+    },
+    {
+      "structure": "create_easy_structures:undergroundtrain",
+      "factor": 0.8
+    },
+    {
+      "structure": "create_easy_structures:windmill",
+      "factor": 0.7
+    },
+
+    {
+      "structure": "create_rustic_structures:rustic_barn",
+      "factor": 0.6
+    },
+    {
+      "structure": "create_rustic_structures:rustic_smithy",
+      "factor": 0.7
+    },
+    {
+      "structure": "create_rustic_structures:rustic_well",
+      "factor": 0.5
+    },
+    {
+      "structure": "create_rustic_structures:rustic_windmill",
+      "factor": 0.7
+    },
+
+    {
+      "structure": "create_structures_arise:chocolate_pit",
+      "factor": 0.7
+    },
+    {
+      "structure": "create_structures_arise:create_bastion",
+      "factor": 1.0
+    },
+    {
+      "structure": "create_structures_arise:create_copper_statue",
+      "factor": 0.8
+    },
+    {
+      "structure": "create_structures_arise:create_dungeon_base",
+      "factor": 0.8
+    },
+    {
+      "structure": "create_structures_arise:create_ruined_castle",
+      "factor": 1.5
+    },
+    {
+      "structure": "create_structures_arise:createairdrop",
+      "factor": 1.0
+    },
+    {
+      "structure": "create_structures_arise:createcontainer",
+      "factor": 0.8
+    },
+    {
+      "structure": "create_structures_arise:createdesertwell",
+      "factor": 0.6
+    },
+    {
+      "structure": "create_structures_arise:createfluidtank",
+      "factor": 0.8
+    },
+    {
+      "structure": "create_structures_arise:createhouse",
+      "factor": 0.6
+    },
+    {
+      "structure": "create_structures_arise:createlittleman",
+      "factor": 0.8
+    },
+    {
+      "structure": "create_structures_arise:createlosttrainstation",
+      "factor": 0.8
+    },
+    {
+      "structure": "create_structures_arise:createminiskyvillage",
+      "factor": 0.7
+    },
+    {
+      "structure": "create_structures_arise:createoldruine",
+      "factor": 0.8
+    },
+    {
+      "structure": "create_structures_arise:createwitchhut",
+      "factor": 0.7
+    },
+    {
+      "structure": "create_structures_arise:crimsite_tower",
+      "factor": 1.0
+    },
+    {
+      "structure": "create_structures_arise:honey_pit",
+      "factor": 0.7
+    },
+    {
+      "structure": "create_structures_arise:minetrain",
+      "factor": 0.8
+    },
+    {
+      "structure": "create_structures_arise:pillager_boat",
+      "factor": 0.6
+    },
+    {
+      "structure": "create_structures_arise:pillagersteampunkairship",
+      "factor": 0.8
+    },
+    {
+      "structure": "create_structures_arise:towerofochrum",
+      "factor": 1.2
+    },
+    {
+      "structure": "create_structures_arise:windmill",
+      "factor": 0.7
+    },
+
+    // === UNDERGROUND WORLDS ===
+    {
+      "structure": "undergroundworlds:archives",
+      "factor": 0.6
+    },
+    {
+      "structure": "undergroundworlds:chillager_outposts",
+      "factor": 0.7
+    },
+    {
+      "structure": "undergroundworlds:desert_pyramids",
+      "factor": 0.7
+    },
+    {
+      "structure": "undergroundworlds:ice_dungeons",
+      "factor": 0.7
+    },
+    {
+      "structure": "undergroundworlds:jungle_temples",
+      "factor": 0.7
+    },
+    {
+      "structure": "undergroundworlds:jungle_treehouses",
+      "factor": 0.7
+    },
+    {
+      "structure": "undergroundworlds:spider_caves_houses",
+      "factor": 0.8
+    },
+    {
+      "structure": "undergroundworlds:swamp_houses",
+      "factor": 0.7
+    },
+    {
+      "structure": "undergroundworlds:tundra_houses",
+      "factor": 0.7
+    },
+
+    // === APOTHEOSIS ===
+    {
+      "structure": "apotheosis:towers",
+      "factor": 1.5
+    },
+
+    // === ANCIENT STRUCTURES ===
+    {
+      "structure": "ancientstructures:german_buildings",
+      "factor": 1.0
+    },
+    {
+      "structure": "ancientstructures:japanese_buildings",
+      "factor": 1.0
+    },
+    {
+      "structure": "ancientstructures:mayan_buildings",
+      "factor": 1.0
+    },
+    {
+      "structure": "ancientstructures:roman_buildings",
+      "factor": 1.0
+    },
+
+    // === ATI STRUCTURES ===
+    {
+      "structure": "ati_structures:aboveground_large",
+      "factor": 1.5
+    },
+    {
+      "structure": "ati_structures:aboveground_medium",
+      "factor": 1.0
+    },
+    {
+      "structure": "ati_structures:aboveground_small",
+      "factor": 0.8
+    },
+    {
+      "structure": "ati_structures:rare",
+      "factor": 2.0
+    },
+    {
+      "structure": "ati_structures:underground_medium",
+      "factor": 0.7
+    },
+    {
+      "structure": "ati_structures:underground_small",
+      "factor": 0.6
+    },
+
+    // === IDAS (Integrated Dungeons and Structures) ===
+    {
+      "structure": "idas:idas_common",
+      "factor": 0.8
+    },
+    {
+      "structure": "idas:idas_nether",
+      "factor": 0.8
+    },
+    {
+      "structure": "idas:idas_ocean",
+      "factor": 0.6
+    },
+    {
+      "structure": "idas:idas_rare",
+      "factor": 1.5
+    },
+    {
+      "structure": "idas:idas_small",
+      "factor": 0.6
+    },
+    {
+      "structure": "idas:idas_small_nether",
+      "factor": 0.8
+    },
+    {
+      "structure": "idas:idas_underground",
+      "factor": 0.7
+    },
+    {
+      "structure": "idas:idas_underground_rare",
+      "factor": 1.2
+    },
+
+    // === TOMBSTONE ===
+    {
+      "structure": "tombstone:abandoned_grave",
+      "factor": 0.4
+    },
+
+    // === ENDGAME — rare but findable ===
+    {
+      "structure": "minecraft:woodland_mansions",
+      "factor": 2.5
+    },
+    {
+      "structure": "minecraft:ocean_monuments",
+      "factor": 1.0
+    },
+    {
+      "structure": "minecraft:end_cities",
+      "factor": 1.0
+    },
+    {
+      "structure": "minecraft:desert_pyramids",
+      "factor": 0.8
+    },
+    {
+      "structure": "minecraft:jungle_temples",
+      "factor": 0.8
+    },
+    {
+      "structure": "minecraft:swamp_huts",
+      "factor": 0.8
+    },
+    {
+      "structure": "minecraft:igloos",
+      "factor": 0.8
+    }
+  ]
+}

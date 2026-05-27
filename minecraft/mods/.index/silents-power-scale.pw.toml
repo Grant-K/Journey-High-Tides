@@ -1,0 +1,16 @@
+filename = 'power-scale-1.21.1-neoforge-0.3.1.1.jar'
+name = "Silent's Power Scale"
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'c05310e54c5a74dd0dc0fd9b19445b1a4046db3a528039839ba50677360075d97cbfa53213d7211d86a439aaf9ea659ade6ae080683c390766b0d2c4e9d14b07'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/YCjSHxCP/versions/UVtML06x/power-scale-1.21.1-neoforge-0.3.1.1.jar'
+
+[update.modrinth]
+mod-id = 'YCjSHxCP'
+version = 'UVtML06x'

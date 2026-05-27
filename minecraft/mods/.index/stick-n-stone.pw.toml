@@ -1,0 +1,16 @@
+filename = 'sticknstone-1.1.0-1.21.1.jar'
+name = "Stick n' Stone"
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'f7e5d8183b9b03fe33e9acd35bab64780f91365ab590d6993c3e802dbdd98e07a340909f3dbb8380dd8386e40e7ae7e1855a5952a29f87ae638a12fd6f06c835'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/E7F2ftx2/versions/2OxSaLTR/sticknstone-1.1.0-1.21.1.jar'
+
+[update.modrinth]
+mod-id = 'E7F2ftx2'
+version = '2OxSaLTR'

@@ -1,0 +1,16 @@
+filename = 'minersdelight-1.21.1-1.4.3.jar'
+name = "Miner's Delight"
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '4cd682b4388884a68825055377f108007c5a346b859768e8ce1a3f7efb10b415984c45a1d3f933d3aada7a0dbfb62f749f3f3fe1a629a3a7ad3cac99142f468a'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/qMxbM4BQ/versions/IbvX7lgE/minersdelight-1.21.1-1.4.3.jar'
+
+[update.modrinth]
+mod-id = 'qMxbM4BQ'
+version = 'IbvX7lgE'

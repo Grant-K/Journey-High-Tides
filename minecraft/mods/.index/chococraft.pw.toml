@@ -1,0 +1,16 @@
+filename = 'chococraft-1.21.1-neoforge-0.11.12.jar'
+name = 'Chococraft'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'b74d1e52171807e9b6b6ff142f2b6ab9fc1b894dbd2de1839a7f2d18dd4c78c093b7d991963c1182933f746db6ffda0bc2f63bac2786c32d8e23215be727caa0'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/bPTEaC7v/versions/1Bcz0w79/chococraft-1.21.1-neoforge-0.11.12.jar'
+
+[update.modrinth]
+mod-id = 'bPTEaC7v'
+version = '1Bcz0w79'

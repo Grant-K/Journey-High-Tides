@@ -1,0 +1,63 @@
+import { $CompletableFuture } from "@package/java/util/concurrent";
+import { $Message_, $Message } from "@package/com/mojang/brigadier";
+import { $Comparable } from "@package/java/lang";
+import { $StringRange, $CommandContext } from "@package/com/mojang/brigadier/context";
+import { $List_, $Collection_, $List } from "@package/java/util";
+
+declare module "@package/com/mojang/brigadier/suggestion" {
+    export class $SuggestionsBuilder {
+        restart(): $SuggestionsBuilder;
+        suggest(arg0: string): $SuggestionsBuilder;
+        suggest(arg0: string, arg1: $Message_): $SuggestionsBuilder;
+        suggest(arg0: number): $SuggestionsBuilder;
+        suggest(arg0: number, arg1: $Message_): $SuggestionsBuilder;
+        buildFuture(): $CompletableFuture<$Suggestions>;
+        createOffset(arg0: number): $SuggestionsBuilder;
+        getRemainingLowerCase(): string;
+        getStart(): number;
+        getInput(): string;
+        build(): $Suggestions;
+        getRemaining(): string;
+        add(arg0: $SuggestionsBuilder): $SuggestionsBuilder;
+        constructor(arg0: string, arg1: string, arg2: number);
+        constructor(arg0: string, arg1: number);
+        get remainingLowerCase(): string;
+        get start(): number;
+        get input(): string;
+        get remaining(): string;
+    }
+    export class $Suggestions {
+        getRange(): $StringRange;
+        static create(arg0: string, arg1: $Collection_<$Suggestion>): $Suggestions;
+        getList(): $List<$Suggestion>;
+        isEmpty(): boolean;
+        static merge(arg0: string, arg1: $Collection_<$Suggestions>): $Suggestions;
+        static empty(): $CompletableFuture<$Suggestions>;
+        constructor(arg0: $StringRange, arg1: $List_<$Suggestion>);
+        get range(): $StringRange;
+        get list(): $List<$Suggestion>;
+    }
+    export class $SuggestionProvider<S> {
+    }
+    export interface $SuggestionProvider<S> {
+        getSuggestions(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+    }
+    /**
+     * Values that may be interpreted as {@link $SuggestionProvider}.
+     */
+    export type $SuggestionProvider_<S> = ((arg0: $CommandContext<S>, arg1: $SuggestionsBuilder) => $CompletableFuture<$Suggestions>);
+    export class $Suggestion implements $Comparable<$Suggestion> {
+        getTooltip(): $Message;
+        getRange(): $StringRange;
+        getText(): string;
+        expand(arg0: string, arg1: $StringRange): $Suggestion;
+        compareTo(arg0: $Suggestion): number;
+        apply(arg0: string): string;
+        compareToIgnoreCase(arg0: $Suggestion): number;
+        constructor(arg0: $StringRange, arg1: string);
+        constructor(arg0: $StringRange, arg1: string, arg2: $Message_);
+        get tooltip(): $Message;
+        get range(): $StringRange;
+        get text(): string;
+    }
+}

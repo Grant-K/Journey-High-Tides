@@ -1,0 +1,24 @@
+{
+	version: 1
+	uuid: "837ca7fdc402411bb98313e5682dcda2"
+	name: "_ANGELIX_#837ca7fd"
+	lock: false
+	rewards_blocked: false
+	task_progress: {
+		66DDEBEF3BAF0DC9: 1L
+	}
+	started: {
+		4AEC50DD960A89FD: 1779378693426L
+		0000000000000001: 1779378693426L
+		5316EF06AD8BD7C1: 1779378693426L
+		66DDEBEF3BAF0DC9: 1779378693426L
+	}
+	completed: {
+		5316EF06AD8BD7C1: 1779378693433L
+		66DDEBEF3BAF0DC9: 1779378693433L
+	}
+	repeatable: { }
+	completion_count: { }
+	claimed_rewards: { }
+	player_data: { }
+}

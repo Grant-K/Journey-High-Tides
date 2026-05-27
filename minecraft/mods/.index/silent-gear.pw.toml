@@ -1,0 +1,16 @@
+filename = 'silent-gear-1.21.1-neoforge-4.1.6.1.jar'
+name = 'Silent Gear'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '841464e7efe894420952c21dfdbe1494319dc278b30e27f72890db1705e6176dbd127956cacf1276d6ce085d083efb1be951ec3047274972e821e6b464d9834b'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/73mSSnCf/versions/LNwmc5Rt/silent-gear-1.21.1-neoforge-4.1.6.1.jar'
+
+[update.modrinth]
+mod-id = '73mSSnCf'
+version = 'LNwmc5Rt'

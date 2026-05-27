@@ -1,0 +1,27 @@
+import { $ReferenceSet } from "@package/it/unimi/dsi/fastutil/objects";
+import { $Property } from "@package/net/minecraft/world/level/block/state/properties";
+import { $Comparable, $Object, $Comparable_ } from "@package/java/lang";
+import { $Map_, $Map$Entry, $Collection_ } from "@package/java/util";
+
+declare module "@package/malte0811/ferritecore/fastmap" {
+    export class $FastMap<Value> {
+        getIndexOf(arg0: $Map_<$Property<never>, $Comparable_<never>>): number;
+        numProperties(): number;
+        isSingleState(): boolean;
+        getEntry(arg0: number, arg1: number): $Map$Entry<$Property<never>, $Comparable<never>>;
+        getPropertySet(): $ReferenceSet<$Property<never>>;
+        getValue(arg0: number, arg1: $Object): $Comparable<never>;
+        getValue<T extends $Comparable<T>>(arg0: number, arg1: $Property<T>): T;
+        getKey(arg0: number): $FastMapKey<never>;
+        with(arg0: number, arg1: $Property<never>, arg2: $Object): Value;
+        constructor(arg0: $Collection_<$Property<never>>, arg1: $Map_<$Map_<$Property<never>, $Comparable_<never>>, Value>, arg2: boolean);
+        get singleState(): boolean;
+        get propertySet(): $ReferenceSet<$Property<never>>;
+    }
+    export class $FastMapKey<T extends $Comparable<T>> {
+        numValues(): number;
+        getProperty(): $Property<T>;
+        getValue(arg0: number): T;
+        get property(): $Property<T>;
+    }
+}

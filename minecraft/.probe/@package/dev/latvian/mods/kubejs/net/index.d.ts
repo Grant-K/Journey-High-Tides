@@ -1,0 +1,359 @@
+import { $JsonElement_, $JsonElement } from "@package/com/google/gson";
+import { $Level } from "@package/net/minecraft/world/level";
+import { $ItemTooltipData, $ItemTooltipData_ } from "@package/dev/latvian/mods/kubejs/text/tooltip";
+import { $ItemStack_, $ItemStack } from "@package/net/minecraft/world/item";
+import { $MinecraftServer } from "@package/net/minecraft/server";
+import { $Tag_, $Tag, $CompoundTag, $CompoundTag_ } from "@package/net/minecraft/nbt";
+import { $LivingEntity } from "@package/net/minecraft/world/entity";
+import { $Player } from "@package/net/minecraft/world/entity/player";
+import { $CustomPacketPayload_, $CustomPacketPayload$Type, $CustomPacketPayload } from "@package/net/minecraft/network/protocol/common/custom";
+import { $UUID, $List, $UUID_, $Collection_, $List_, $Collection } from "@package/java/util";
+import { $ClientboundCustomPayloadPacket, $ServerboundCustomPayloadPacket } from "@package/net/minecraft/network/protocol/common";
+import { $KubePlayerEvent } from "@package/dev/latvian/mods/kubejs/player";
+import { $IPayloadContext } from "@package/net/neoforged/neoforge/network/handling";
+import { $RegisterPayloadHandlersEvent } from "@package/net/neoforged/neoforge/network/event";
+import { $RecipeViewerData, $RecipeViewerData_ } from "@package/dev/latvian/mods/kubejs/recipe/viewer/server";
+import { $BlockPos, $BlockPos_, $RegistryAccess } from "@package/net/minecraft/core";
+import { $ServerPlayer } from "@package/net/minecraft/server/level";
+import { $NotificationToastData, $NotificationToastData_ } from "@package/dev/latvian/mods/kubejs/util";
+import { $RegistryFriendlyByteBuf, $FriendlyByteBuf } from "@package/net/minecraft/network";
+import { $ResourceLocation_, $ResourceLocation } from "@package/net/minecraft/resources";
+import { $Record, $Object } from "@package/java/lang";
+import { $ByteBuf } from "@package/io/netty/buffer";
+import { $ConsoleLine } from "@package/dev/latvian/mods/kubejs/script";
+import { $StreamCodec } from "@package/net/minecraft/network/codec";
+
+declare module "@package/dev/latvian/mods/kubejs/net" {
+    export class $SyncServerDataPayload extends $Record implements $CustomPacketPayload {
+        handle(ctx: $IPayloadContext): void;
+        type(): $CustomPacketPayload$Type<never>;
+        data(): $KubeServerData;
+        toVanillaClientbound(): $ClientboundCustomPayloadPacket;
+        toVanillaServerbound(): $ServerboundCustomPayloadPacket;
+        static STREAM_CODEC: $StreamCodec<$RegistryFriendlyByteBuf, $SyncServerDataPayload>;
+        constructor(data: $KubeServerData_);
+    }
+    /**
+     * Values that may be interpreted as {@link $SyncServerDataPayload}.
+     */
+    export type $SyncServerDataPayload_ = { data?: $KubeServerData_,  } | [data?: $KubeServerData_, ];
+    export class $SetActivePostShaderPayload extends $Record implements $CustomPacketPayload {
+        handle(ctx: $IPayloadContext): void;
+        type(): $CustomPacketPayload$Type<never>;
+        id(): ($ResourceLocation) | undefined;
+        toVanillaClientbound(): $ClientboundCustomPayloadPacket;
+        toVanillaServerbound(): $ServerboundCustomPayloadPacket;
+        static STREAM_CODEC: $StreamCodec<$ByteBuf, $SetActivePostShaderPayload>;
+        constructor(id: ($ResourceLocation_) | undefined);
+    }
+    /**
+     * Values that may be interpreted as {@link $SetActivePostShaderPayload}.
+     */
+    export type $SetActivePostShaderPayload_ = { id?: ($ResourceLocation_) | undefined,  } | [id?: ($ResourceLocation_) | undefined, ];
+    export class $RequestEntityKubedexPayload extends $Record implements $CustomPacketPayload {
+        entityId(): number;
+        handle(ctx: $IPayloadContext): void;
+        type(): $CustomPacketPayload$Type<never>;
+        flags(): number;
+        toVanillaClientbound(): $ClientboundCustomPayloadPacket;
+        toVanillaServerbound(): $ServerboundCustomPayloadPacket;
+        static STREAM_CODEC: $StreamCodec<$ByteBuf, $RequestEntityKubedexPayload>;
+        constructor(entityId: number, flags: number);
+    }
+    /**
+     * Values that may be interpreted as {@link $RequestEntityKubedexPayload}.
+     */
+    export type $RequestEntityKubedexPayload_ = { entityId?: number, flags?: number,  } | [entityId?: number, flags?: number, ];
+    export class $SyncStagesPayload extends $Record implements $CustomPacketPayload {
+        stages(): $Collection<string>;
+        handle(ctx: $IPayloadContext): void;
+        type(): $CustomPacketPayload$Type<never>;
+        toVanillaClientbound(): $ClientboundCustomPayloadPacket;
+        toVanillaServerbound(): $ServerboundCustomPayloadPacket;
+        static STREAM_CODEC: $StreamCodec<$ByteBuf, $SyncStagesPayload>;
+        constructor(stages: $Collection_<string>);
+    }
+    /**
+     * Values that may be interpreted as {@link $SyncStagesPayload}.
+     */
+    export type $SyncStagesPayload_ = { stages?: $Collection_<string>,  } | [stages?: $Collection_<string>, ];
+    export class $NotificationPayload extends $Record implements $CustomPacketPayload {
+        handle(ctx: $IPayloadContext): void;
+        type(): $CustomPacketPayload$Type<never>;
+        data(): $NotificationToastData;
+        toVanillaClientbound(): $ClientboundCustomPayloadPacket;
+        toVanillaServerbound(): $ServerboundCustomPayloadPacket;
+        static STREAM_CODEC: $StreamCodec<$RegistryFriendlyByteBuf, $NotificationPayload>;
+        constructor(data: $NotificationToastData_);
+    }
+    /**
+     * Values that may be interpreted as {@link $NotificationPayload}.
+     */
+    export type $NotificationPayload_ = { data?: $NotificationToastData_,  } | [data?: $NotificationToastData_, ];
+    export class $RequestInventoryKubedexPayload extends $Record implements $CustomPacketPayload {
+        stacks(): $List<$ItemStack>;
+        slots(): $List<number>;
+        handle(ctx: $IPayloadContext): void;
+        type(): $CustomPacketPayload$Type<never>;
+        flags(): number;
+        toVanillaClientbound(): $ClientboundCustomPayloadPacket;
+        toVanillaServerbound(): $ServerboundCustomPayloadPacket;
+        static STREAM_CODEC: $StreamCodec<$RegistryFriendlyByteBuf, $RequestInventoryKubedexPayload>;
+        constructor(slots: $List_<number>, stacks: $List_<$ItemStack_>, flags: number);
+    }
+    /**
+     * Values that may be interpreted as {@link $RequestInventoryKubedexPayload}.
+     */
+    export type $RequestInventoryKubedexPayload_ = { slots?: $List_<number>, stacks?: $List_<$ItemStack_>, flags?: number,  } | [slots?: $List_<number>, stacks?: $List_<$ItemStack_>, flags?: number, ];
+    export class $NetworkKubeEvent implements $KubePlayerEvent {
+        /**
+         * The channel of the packet.
+         */
+        getChannel(): string;
+        /**
+         * The data of the packet.
+         */
+        getData(): $CompoundTag;
+        getPlayer(): $Player;
+        getLevel(): $Level;
+        getRegistries(): $RegistryAccess;
+        getServer(): $MinecraftServer;
+        /**
+         * Stops the event with the given exit value. Execution will be stopped **immediately**.
+         * 
+         * `success` denotes a `true` outcome.
+         */
+        success(value: $Object): $Object;
+        /**
+         * Stops the event with default exit value. Execution will be stopped **immediately**.
+         * 
+         * `success` denotes a `true` outcome.
+         */
+        success(): $Object;
+        /**
+         * Stops the event with the given exit value. Execution will be stopped **immediately**.
+         * 
+         * `exit` denotes a `default` outcome.
+         */
+        exit(value: $Object): $Object;
+        /**
+         * Stops the event with default exit value. Execution will be stopped **immediately**.
+         * 
+         * `exit` denotes a `default` outcome.
+         */
+        exit(): $Object;
+        /**
+         * Cancels the event with the given exit value. Execution will be stopped **immediately**.
+         * 
+         * `cancel` denotes a `false` outcome.
+         */
+        cancel(value: $Object): $Object;
+        /**
+         * Cancels the event with default exit value. Execution will be stopped **immediately**.
+         * 
+         * `cancel` denotes a `false` outcome.
+         */
+        cancel(): $Object;
+        getEntity(): $LivingEntity;
+        constructor(p: $Player, c: string, d: $CompoundTag_);
+        get channel(): string;
+        get data(): $CompoundTag;
+        get player(): $Player;
+        get level(): $Level;
+        get registries(): $RegistryAccess;
+        get server(): $MinecraftServer;
+        get entity(): $LivingEntity;
+    }
+    export class $RemoveStagePayload extends $Record implements $CustomPacketPayload {
+        player(): $UUID;
+        stage(): string;
+        handle(ctx: $IPayloadContext): void;
+        type(): $CustomPacketPayload$Type<never>;
+        toVanillaClientbound(): $ClientboundCustomPayloadPacket;
+        toVanillaServerbound(): $ServerboundCustomPayloadPacket;
+        static STREAM_CODEC: $StreamCodec<$ByteBuf, $RemoveStagePayload>;
+        constructor(player: $UUID_, stage: string);
+    }
+    /**
+     * Values that may be interpreted as {@link $RemoveStagePayload}.
+     */
+    export type $RemoveStagePayload_ = { player?: $UUID_, stage?: string,  } | [player?: $UUID_, stage?: string, ];
+    export class $FirstClickPayload extends $Record implements $CustomPacketPayload {
+        clickType(): number;
+        handle(ctx: $IPayloadContext): void;
+        type(): $CustomPacketPayload$Type<never>;
+        toVanillaClientbound(): $ClientboundCustomPayloadPacket;
+        toVanillaServerbound(): $ServerboundCustomPayloadPacket;
+        static STREAM_CODEC: $StreamCodec<$ByteBuf, $FirstClickPayload>;
+        constructor(clickType: number);
+    }
+    /**
+     * Values that may be interpreted as {@link $FirstClickPayload}.
+     */
+    export type $FirstClickPayload_ = { clickType?: number,  } | [clickType?: number, ];
+    export class $ReloadStartupScriptsPayload extends $Record implements $CustomPacketPayload {
+        dedicated(): boolean;
+        handle(ctx: $IPayloadContext): void;
+        type(): $CustomPacketPayload$Type<never>;
+        toVanillaClientbound(): $ClientboundCustomPayloadPacket;
+        toVanillaServerbound(): $ServerboundCustomPayloadPacket;
+        static STREAM_CODEC: $StreamCodec<$ByteBuf, $ReloadStartupScriptsPayload>;
+        constructor(dedicated: boolean);
+    }
+    /**
+     * Values that may be interpreted as {@link $ReloadStartupScriptsPayload}.
+     */
+    export type $ReloadStartupScriptsPayload_ = { dedicated?: boolean,  } | [dedicated?: boolean, ];
+    export class $RequestBlockKubedexPayload extends $Record implements $CustomPacketPayload {
+        pos(): $BlockPos;
+        handle(ctx: $IPayloadContext): void;
+        type(): $CustomPacketPayload$Type<never>;
+        flags(): number;
+        toVanillaClientbound(): $ClientboundCustomPayloadPacket;
+        toVanillaServerbound(): $ServerboundCustomPayloadPacket;
+        static STREAM_CODEC: $StreamCodec<$ByteBuf, $RequestBlockKubedexPayload>;
+        constructor(pos: $BlockPos_, flags: number);
+    }
+    /**
+     * Values that may be interpreted as {@link $RequestBlockKubedexPayload}.
+     */
+    export type $RequestBlockKubedexPayload_ = { flags?: number, pos?: $BlockPos_,  } | [flags?: number, pos?: $BlockPos_, ];
+    export class $WebServerUpdateJSONPayload extends $Record implements $CustomPacketPayload {
+        requiredTag(): string;
+        handle(ctx: $IPayloadContext): void;
+        payload(): $JsonElement;
+        type(): $CustomPacketPayload$Type<never>;
+        event(): string;
+        toVanillaClientbound(): $ClientboundCustomPayloadPacket;
+        toVanillaServerbound(): $ServerboundCustomPayloadPacket;
+        static STREAM_CODEC: $StreamCodec<$ByteBuf, $WebServerUpdateJSONPayload>;
+        constructor(event: string, requiredTag: string, payload: $JsonElement_);
+    }
+    /**
+     * Values that may be interpreted as {@link $WebServerUpdateJSONPayload}.
+     */
+    export type $WebServerUpdateJSONPayload_ = { requiredTag?: string, payload?: $JsonElement_, event?: string,  } | [requiredTag?: string, payload?: $JsonElement_, event?: string, ];
+    export class $KubeServerData extends $Record {
+        recipeViewerData(): ($RecipeViewerData) | undefined;
+        itemTooltipData(): $List<$ItemTooltipData>;
+        static collect(): $KubeServerData;
+        static STREAM_CODEC: $StreamCodec<$RegistryFriendlyByteBuf, $KubeServerData>;
+        constructor(recipeViewerData: ($RecipeViewerData_) | undefined, itemTooltipData: $List_<$ItemTooltipData_>);
+    }
+    /**
+     * Values that may be interpreted as {@link $KubeServerData}.
+     */
+    export type $KubeServerData_ = { itemTooltipData?: $List_<$ItemTooltipData_>, recipeViewerData?: ($RecipeViewerData_) | undefined,  } | [itemTooltipData?: $List_<$ItemTooltipData_>, recipeViewerData?: ($RecipeViewerData_) | undefined, ];
+    export class $WebServerUpdateNBTPayload extends $Record implements $CustomPacketPayload {
+        requiredTag(): string;
+        handle(ctx: $IPayloadContext): void;
+        payload(): ($Tag) | undefined;
+        type(): $CustomPacketPayload$Type<never>;
+        event(): string;
+        toVanillaClientbound(): $ClientboundCustomPayloadPacket;
+        toVanillaServerbound(): $ServerboundCustomPayloadPacket;
+        static STREAM_CODEC: $StreamCodec<$ByteBuf, $WebServerUpdateNBTPayload>;
+        constructor(event: string, requiredTag: string, payload: ($Tag_) | undefined);
+    }
+    /**
+     * Values that may be interpreted as {@link $WebServerUpdateNBTPayload}.
+     */
+    export type $WebServerUpdateNBTPayload_ = { requiredTag?: string, payload?: ($Tag_) | undefined, event?: string,  } | [requiredTag?: string, payload?: ($Tag_) | undefined, event?: string, ];
+    export class $KubeJSNet$Kubedex {
+        static REQUEST_BLOCK: $CustomPacketPayload$Type<$RequestBlockKubedexPayload>;
+        static REQUEST_INVENTORY: $CustomPacketPayload$Type<$RequestInventoryKubedexPayload>;
+        static REQUEST_ENTITY: $CustomPacketPayload$Type<$RequestEntityKubedexPayload>;
+    }
+    export interface $KubeJSNet$Kubedex {
+    }
+    export class $KubeJSNet {
+        static safeSendToPlayer(player: $ServerPlayer, payload: $CustomPacketPayload_, ...payloads: $CustomPacketPayload_[]): void;
+        static sendToAllPlayers(payload: $CustomPacketPayload_, ...payloads: $CustomPacketPayload_[]): void;
+        static register(event: $RegisterPayloadHandlersEvent): void;
+        static WEB_SERVER_NBT_UPDATE: $CustomPacketPayload$Type<$WebServerUpdateNBTPayload>;
+        static DISPLAY_CLIENT_ERRORS: $CustomPacketPayload$Type<$DisplayClientErrorsPayload>;
+        static REMOVE_STAGE: $CustomPacketPayload$Type<$RemoveStagePayload>;
+        static ADD_STAGE: $CustomPacketPayload$Type<$AddStagePayload>;
+        static RELOAD_STARTUP_SCRIPTS: $CustomPacketPayload$Type<$ReloadStartupScriptsPayload>;
+        static SEND_DATA_FROM_CLIENT: $CustomPacketPayload$Type<$SendDataFromClientPayload>;
+        static NOTIFICATION: $CustomPacketPayload$Type<$NotificationPayload>;
+        static WEB_SERVER_JSON_UPDATE: $CustomPacketPayload$Type<$WebServerUpdateJSONPayload>;
+        static DISPLAY_SERVER_ERRORS: $CustomPacketPayload$Type<$DisplayServerErrorsPayload>;
+        static SYNC_SERVER_DATA: $CustomPacketPayload$Type<$SyncServerDataPayload>;
+        static SEND_DATA_FROM_SERVER: $CustomPacketPayload$Type<$SendDataFromServerPayload>;
+        static SET_ACTIVE_POST_SHADER: $CustomPacketPayload$Type<$SetActivePostShaderPayload>;
+        static FIRST_CLICK: $CustomPacketPayload$Type<$FirstClickPayload>;
+        static SYNC_STAGES: $CustomPacketPayload$Type<$SyncStagesPayload>;
+    }
+    export interface $KubeJSNet {
+    }
+    export class $SendDataFromClientPayload extends $Record implements $CustomPacketPayload {
+        handle(ctx: $IPayloadContext): void;
+        channel(): string;
+        type(): $CustomPacketPayload$Type<never>;
+        data(): $CompoundTag;
+        toVanillaClientbound(): $ClientboundCustomPayloadPacket;
+        toVanillaServerbound(): $ServerboundCustomPayloadPacket;
+        static STREAM_CODEC: $StreamCodec<$ByteBuf, $SendDataFromClientPayload>;
+        constructor(channel: string, data: $CompoundTag_);
+    }
+    /**
+     * Values that may be interpreted as {@link $SendDataFromClientPayload}.
+     */
+    export type $SendDataFromClientPayload_ = { data?: $CompoundTag_, channel?: string,  } | [data?: $CompoundTag_, channel?: string, ];
+    export class $AddStagePayload extends $Record implements $CustomPacketPayload {
+        player(): $UUID;
+        stage(): string;
+        handle(ctx: $IPayloadContext): void;
+        type(): $CustomPacketPayload$Type<never>;
+        toVanillaClientbound(): $ClientboundCustomPayloadPacket;
+        toVanillaServerbound(): $ServerboundCustomPayloadPacket;
+        static STREAM_CODEC: $StreamCodec<$ByteBuf, $AddStagePayload>;
+        constructor(player: $UUID_, stage: string);
+    }
+    /**
+     * Values that may be interpreted as {@link $AddStagePayload}.
+     */
+    export type $AddStagePayload_ = { player?: $UUID_, stage?: string,  } | [player?: $UUID_, stage?: string, ];
+    export class $DisplayServerErrorsPayload extends $Record implements $CustomPacketPayload {
+        scriptType(): number;
+        handle(ctx: $IPayloadContext): void;
+        errors(): $List<$ConsoleLine>;
+        warnings(): $List<$ConsoleLine>;
+        type(): $CustomPacketPayload$Type<never>;
+        toVanillaClientbound(): $ClientboundCustomPayloadPacket;
+        toVanillaServerbound(): $ServerboundCustomPayloadPacket;
+        static STREAM_CODEC: $StreamCodec<$FriendlyByteBuf, $DisplayServerErrorsPayload>;
+        constructor(scriptType: number, errors: $List_<$ConsoleLine>, warnings: $List_<$ConsoleLine>);
+    }
+    /**
+     * Values that may be interpreted as {@link $DisplayServerErrorsPayload}.
+     */
+    export type $DisplayServerErrorsPayload_ = { scriptType?: number, warnings?: $List_<$ConsoleLine>, errors?: $List_<$ConsoleLine>,  } | [scriptType?: number, warnings?: $List_<$ConsoleLine>, errors?: $List_<$ConsoleLine>, ];
+    export class $SendDataFromServerPayload extends $Record implements $CustomPacketPayload {
+        handle(ctx: $IPayloadContext): void;
+        channel(): string;
+        type(): $CustomPacketPayload$Type<never>;
+        data(): $CompoundTag;
+        toVanillaClientbound(): $ClientboundCustomPayloadPacket;
+        toVanillaServerbound(): $ServerboundCustomPayloadPacket;
+        static STREAM_CODEC: $StreamCodec<$ByteBuf, $SendDataFromServerPayload>;
+        constructor(channel: string, data: $CompoundTag_);
+    }
+    /**
+     * Values that may be interpreted as {@link $SendDataFromServerPayload}.
+     */
+    export type $SendDataFromServerPayload_ = { data?: $CompoundTag_, channel?: string,  } | [data?: $CompoundTag_, channel?: string, ];
+    export class $DisplayClientErrorsPayload extends $Record implements $CustomPacketPayload {
+        handle(ctx: $IPayloadContext): void;
+        type(): $CustomPacketPayload$Type<never>;
+        toVanillaClientbound(): $ClientboundCustomPayloadPacket;
+        toVanillaServerbound(): $ServerboundCustomPayloadPacket;
+        static STREAM_CODEC: $StreamCodec<$ByteBuf, $DisplayClientErrorsPayload>;
+        constructor();
+    }
+    /**
+     * Values that may be interpreted as {@link $DisplayClientErrorsPayload}.
+     */
+    export type $DisplayClientErrorsPayload_ = {  } | [];
+}

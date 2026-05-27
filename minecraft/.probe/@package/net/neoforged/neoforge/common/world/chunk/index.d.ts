@@ -1,0 +1,79 @@
+import { $ForcedChunksSavedData } from "@package/net/minecraft/world/level";
+import { $BlockPos, $BlockPos_ } from "@package/net/minecraft/core";
+import { $ServerLevel } from "@package/net/minecraft/server/level";
+import { $LongSet } from "@package/it/unimi/dsi/fastutil/longs";
+import { $Event } from "@package/net/neoforged/bus/api";
+import { $CompoundTag, $CompoundTag_ } from "@package/net/minecraft/nbt";
+import { $ResourceLocation_, $ResourceLocation } from "@package/net/minecraft/resources";
+import { $Entity } from "@package/net/minecraft/world/entity";
+import { $Comparable, $Record } from "@package/java/lang";
+import { $UUID_, $UUID, $Map } from "@package/java/util";
+import { $IModBusEvent } from "@package/net/neoforged/fml/event";
+
+declare module "@package/net/neoforged/neoforge/common/world/chunk" {
+    export class $ForcedChunkManager$TicketOwner<T extends $Comparable<T>> implements $Comparable<$ForcedChunkManager$TicketOwner<T>> {
+    }
+    export class $TicketController extends $Record {
+        callback(): $LoadingValidationCallback;
+        forceChunk(arg0: $ServerLevel, arg1: $UUID_, arg2: number, arg3: number, arg4: boolean, arg5: boolean): boolean;
+        forceChunk(arg0: $ServerLevel, arg1: $Entity, arg2: number, arg3: number, arg4: boolean, arg5: boolean): boolean;
+        forceChunk(arg0: $ServerLevel, arg1: $BlockPos_, arg2: number, arg3: number, arg4: boolean, arg5: boolean): boolean;
+        id(): $ResourceLocation;
+        constructor(id: $ResourceLocation_, callback: $LoadingValidationCallback_);
+        constructor(arg0: $ResourceLocation_);
+    }
+    /**
+     * Values that may be interpreted as {@link $TicketController}.
+     */
+    export type $TicketController_ = { callback?: $LoadingValidationCallback_, id?: $ResourceLocation_,  } | [callback?: $LoadingValidationCallback_, id?: $ResourceLocation_, ];
+    export class $LoadingValidationCallback {
+    }
+    export interface $LoadingValidationCallback {
+        validateTickets(arg0: $ServerLevel, arg1: $TicketHelper): void;
+    }
+    /**
+     * Values that may be interpreted as {@link $LoadingValidationCallback}.
+     */
+    export type $LoadingValidationCallback_ = ((arg0: $ServerLevel, arg1: $TicketHelper) => void);
+    export class $RegisterTicketControllersEvent extends $Event implements $IModBusEvent {
+        register(arg0: $TicketController_): void;
+    }
+    export class $TicketSet extends $Record {
+        ticking(): $LongSet;
+        nonTicking(): $LongSet;
+        constructor(nonTicking: $LongSet, ticking: $LongSet);
+    }
+    /**
+     * Values that may be interpreted as {@link $TicketSet}.
+     */
+    export type $TicketSet_ = { ticking?: $LongSet, nonTicking?: $LongSet,  } | [ticking?: $LongSet, nonTicking?: $LongSet, ];
+    export class $TicketHelper {
+        getBlockTickets(): $Map<$BlockPos, $TicketSet>;
+        removeAllTickets(arg0: $BlockPos_): void;
+        removeAllTickets(arg0: $UUID_): void;
+        removeTicket(arg0: $BlockPos_, arg1: number, arg2: boolean): void;
+        removeTicket(arg0: $UUID_, arg1: number, arg2: boolean): void;
+        getEntityTickets(): $Map<$UUID, $TicketSet>;
+        get blockTickets(): $Map<$BlockPos, $TicketSet>;
+        get entityTickets(): $Map<$UUID, $TicketSet>;
+    }
+    export class $ForcedChunkManager$TicketTracker<T extends $Comparable<T>> {
+        getTickingChunks(): $Map<$ForcedChunkManager$TicketOwner<T>, $LongSet>;
+        getChunks(): $Map<$ForcedChunkManager$TicketOwner<T>, $LongSet>;
+        remove(arg0: $ForcedChunkManager$TicketOwner<T>, arg1: number, arg2: boolean): boolean;
+        isEmpty(): boolean;
+        constructor();
+        get tickingChunks(): $Map<$ForcedChunkManager$TicketOwner<T>, $LongSet>;
+        get chunks(): $Map<$ForcedChunkManager$TicketOwner<T>, $LongSet>;
+        get empty(): boolean;
+    }
+    export class $ForcedChunkManager {
+        static writeBlockPos(arg0: $BlockPos_): $CompoundTag;
+        static reinstatePersistentChunks(arg0: $ServerLevel, arg1: $ForcedChunksSavedData): void;
+        static writeModForcedChunks(arg0: $CompoundTag_, arg1: $ForcedChunkManager$TicketTracker<$BlockPos_>, arg2: $ForcedChunkManager$TicketTracker<$UUID_>): void;
+        static readModForcedChunks(arg0: $CompoundTag_, arg1: $ForcedChunkManager$TicketTracker<$BlockPos_>, arg2: $ForcedChunkManager$TicketTracker<$UUID_>): void;
+        static hasForcedChunks(arg0: $ServerLevel): boolean;
+        static init(): void;
+        constructor();
+    }
+}

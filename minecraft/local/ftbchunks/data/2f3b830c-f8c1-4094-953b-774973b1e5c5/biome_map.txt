@@ -1,0 +1,11 @@
+#47F minecraft:birch_forest
+#4F9 minecraft:dark_forest
+#4CA minecraft:dripstone_caves
+#010 minecraft:forest
+#51E minecraft:jagged_peaks
+#2D6 minecraft:meadow
+#1DF minecraft:old_growth_birch_forest
+#0DD minecraft:pale_garden
+#3DC minecraft:plains
+#5FF minecraft:river
+#524 minecraft:snowy_slopes

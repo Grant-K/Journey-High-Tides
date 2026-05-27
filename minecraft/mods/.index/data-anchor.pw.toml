@@ -1,0 +1,16 @@
+filename = 'Data_Anchor-neoforge-1.21.1-2.0.0.14.jar'
+name = 'Data Anchor'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '2d2d109fa328bec52527d3469f8036af72066fd4'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 7942434
+project-id = 1203668

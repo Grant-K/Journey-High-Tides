@@ -1,0 +1,36 @@
+import { $ClientLevel } from "@package/net/minecraft/client/multiplayer";
+import { $ChunkRenderContext } from "@package/net/caffeinemc/mods/sodium/client/world/cloned";
+import { $Minecraft } from "@package/net/minecraft/client";
+import { $LevelSlice } from "@package/net/caffeinemc/mods/sodium/client/world";
+import { $BlockModelShaper } from "@package/net/minecraft/client/renderer/block";
+
+declare module "@package/net/caffeinemc/mods/sodium/client/render/chunk/compile/pipeline" {
+    export class $TextureAtlasSpriteExtension {
+    }
+    export interface $TextureAtlasSpriteExtension {
+        sodium$hasUnknownImageContents(): boolean;
+    }
+    /**
+     * Values that may be interpreted as {@link $TextureAtlasSpriteExtension}.
+     */
+    export type $TextureAtlasSpriteExtension_ = (() => boolean);
+    export class $BlockRenderCache {
+        getWorldSlice(): $LevelSlice;
+        getBlockModels(): $BlockModelShaper;
+        getBlockRenderer(): $BlockRenderer;
+        getFluidRenderer(): $FluidRenderer;
+        cleanup(): void;
+        init(arg0: $ChunkRenderContext): void;
+        constructor(arg0: $Minecraft, arg1: $ClientLevel);
+        get worldSlice(): $LevelSlice;
+        get blockModels(): $BlockModelShaper;
+        get blockRenderer(): $BlockRenderer;
+        get fluidRenderer(): $FluidRenderer;
+    }
+    export class $SpriteContentsExtension {
+    }
+    export interface $SpriteContentsExtension {
+        sodium$hasTranslucentPixels(): boolean;
+        sodium$hasTransparentPixels(): boolean;
+    }
+}

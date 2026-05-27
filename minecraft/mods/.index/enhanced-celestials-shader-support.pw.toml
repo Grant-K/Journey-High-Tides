@@ -1,0 +1,16 @@
+filename = 'lunarshaders-neoforge-1.21.1-2.1.0.jar'
+name = 'Enhanced Celestials Shader Support (Major Update)'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '77bdea9f4c554ebfc04a19bce171521a0bbf3945'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 7952822
+project-id = 1419969

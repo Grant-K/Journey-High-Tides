@@ -1,0 +1,63 @@
+{
+	chapter.4AEC50DD960A89FD.title: "The Journey Reborn"
+	quest.168A0785876D42EB.quest_subtitle: "This Modpack contains Draconic Evolution and Draconic Additions"
+	quest.2F6F1248E5C7C957.quest_desc: [
+		"the mod spectrum is a exploration, progression based magic mod"
+		""
+		"once you find one of the 3 base shards (amethyst, topaz or citrine)"
+		"the mod will give you a guide book, that alongside the mods advancements"
+		"will guide you thru its progression"
+		""
+		"its meant to be progressed thru as you continue to progress thru the game itself"
+	]
+	quest.2F6F1248E5C7C957.quest_subtitle: "this modpack also contains the mod Spectrum"
+	quest.32C7CFCE861342F8.quest_subtitle: "Modpack Also Contains Better Furnace's Reforged"
+	quest.3FC60CCB8EE40274.quest_desc: [
+		"the modpack contains create, and some addons, one of which is"
+		"create aeronautics, a long awaited addon"
+		""
+		"with it, you can make airships, planes and cars, among other things"
+	]
+	quest.3FC60CCB8EE40274.quest_subtitle: "The Modpack's Main Mod - Create Aeronautics"
+	quest.3FC60CCB8EE40274.title: "Info 1"
+	quest.4239F89B6F471D57.quest_desc: [
+		"beware the dragons, hydras, undead monsters and more"
+		""
+		"that will spawn across the world"
+	]
+	quest.4239F89B6F471D57.quest_subtitle: "This Pack Also Has Ice And Fire (community edition)"
+	quest.5316EF06AD8BD7C1.quest_desc: ["where it all begun"]
+	quest.5316EF06AD8BD7C1.quest_subtitle: "The Start Of The Journey"
+	quest.67B15EF9A2B5E448.quest_desc: [
+		"across the world, as you explore, you will encounter *alot* of structres"
+		""
+		"some with loot, some with enemies to fight for said loot"
+		""
+		"some with minibosses to fight to get access to the loot"
+	]
+	quest.67B15EF9A2B5E448.quest_subtitle: "This Modpack Has *alot* of structres to explore and loot"
+	quest.67B15EF9A2B5E448.title: "Info 8"
+	quest.746AE0EA99323DEA.quest_desc: [
+		"Apotheosis allows the player to enchant gear beyond the vanilla limit"
+		""
+		"also allowing the player to \"upgrade\" armor and tools into apothic tiered gear"
+		""
+		"with those apothic tiered items, sometimes they might have \"sockets\", that can be slotted with gems"
+		""
+		"as you progess thru the apothic world tier system you will unlock the ability to find higher rarity gear and gems and via gateways of eternity you will be able to fight apothic mini bosses and enemies"
+	]
+	quest.746AE0EA99323DEA.quest_subtitle: "This Modpack contains Apotheosis And Enchanting Infuser"
+	quest.746AE0EA99323DEA.title: "Info 4"
+	quest.7576C11CAD4EF292.quest_desc: ["one of the first mods you will encounter will more then likely be silent gear, due to that you can convert the basic tools you will find into silent gear tools, also including armor from base game"]
+	quest.7576C11CAD4EF292.quest_subtitle: "This Pack Has SilentGear And SilentGems"
+	quest.7576C11CAD4EF292.title: "Info 2"
+	task.0BD86603757EB714.title: "Info 8"
+	task.20430F17DF544C38.title: "Info 3"
+	task.440D946377AB09AC.title: "Info 2"
+	task.4A556E07BC25B791.title: "Info 4"
+	task.4C949E208759982E.title: "Info 1"
+	task.66DDEBEF3BAF0DC9.title: "Welcome"
+	task.6B1389958DE46CDD.title: "Info 5"
+	task.721EF04043BD272B.title: "Info 6"
+	task.7A1B7EE34FFEB76B.title: "Info 7"
+}

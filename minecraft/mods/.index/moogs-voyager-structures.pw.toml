@@ -1,0 +1,32 @@
+filename = 'MoogsVoyagerStructures-1.21-5.0.8.jar'
+name = "MVS - Moog's Voyager Structures"
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge', 'forge', 'fabric' ]
+x-prismlauncher-mc-versions = [
+    '1.21',
+    '1.21.1',
+    '1.21.10',
+    '1.21.11',
+    '1.21.2',
+    '1.21.3',
+    '1.21.4',
+    '1.21.5',
+    '1.21.6',
+    '1.21.7',
+    '1.21.8',
+    '1.21.9',
+    '26.1',
+    '26.1.1',
+    '26.1.2'
+]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '854b8ad020aff2b8f2e515a68c70b53d67af02ab8e49cf9dc2f621ef5252fcab25e13f490bf84d6ecde48d18112178c7a2912f76e89dcab235d2ab1c8e2d9252'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/OQAgZMH1/versions/14ZHp6Va/MoogsVoyagerStructures-1.21-5.0.8.jar'
+
+[update.modrinth]
+mod-id = 'OQAgZMH1'
+version = '14ZHp6Va'

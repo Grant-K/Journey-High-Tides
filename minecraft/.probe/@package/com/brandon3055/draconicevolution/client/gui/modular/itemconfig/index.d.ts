@@ -1,0 +1,60 @@
+import { $HolderLookup$Provider, $RegistryAccess } from "@package/net/minecraft/core";
+import { $PropertyProvider } from "@package/com/brandon3055/draconicevolution/api/capability";
+import { $ConfigurableItemMenu } from "@package/com/brandon3055/draconicevolution/inventory";
+import { $CompoundTag, $CompoundTag_ } from "@package/net/minecraft/nbt";
+import { $MCDataOutput, $MCDataInput } from "@package/codechicken/lib/data";
+import { $Component } from "@package/net/minecraft/network/chat";
+import { $UUID_, $UUID, $List, $Map } from "@package/java/util";
+import { $Runnable_, $Runnable } from "@package/java/lang";
+import { $ConfigProperty$Type, $ConfigProperty$DecimalFormatter, $ConfigProperty$Type_, $ConfigProperty$IntegerFormatter, $ConfigProperty$BooleanFormatter, $ConfigProperty } from "@package/com/brandon3055/draconicevolution/api/config";
+
+declare module "@package/com/brandon3055/draconicevolution/client/gui/modular/itemconfig" {
+    export class $PropertyData {
+        pullData(arg0: $ConfigProperty, arg1: boolean): void;
+        pullData(arg0: $ConfigurableItemMenu, arg1: boolean): void;
+        isPropertyAvailable(): boolean;
+        sendToServer(arg0: $RegistryAccess): void;
+        onValueChanged(): void;
+        getPropIfApplicable(arg0: $PropertyProvider): $ConfigProperty;
+        doesDataMatch(arg0: $ConfigProperty): boolean;
+        toggleBooleanValue(): void;
+        toggleGlobal(): void;
+        updateNumberValue(arg0: number, arg1: boolean): void;
+        updateDisplayValue(): void;
+        updateBooleanValue(arg0: boolean): void;
+        updateEnumValue(arg0: number): void;
+        getEnumDisplayName(arg0: number): string;
+        getPropertyName(): string;
+        setChangeListener(arg0: $Runnable_): void;
+        static deserialize(arg0: $CompoundTag_, arg1: $HolderLookup$Provider): $PropertyData;
+        serialize(arg0: $HolderLookup$Provider): $CompoundTag;
+        increment(arg0: number): void;
+        write(arg0: $MCDataOutput): void;
+        static read(arg0: $MCDataInput): $PropertyData;
+        copy(): $PropertyData;
+        enumValueIndex: number;
+        displayName: $Component;
+        maxValue: number;
+        booleanFormatter: $ConfigProperty$BooleanFormatter;
+        enumValueOptions: $List<number>;
+        toolTip: $Component;
+        decimalValue: number;
+        type: $ConfigProperty$Type;
+        integerFormatter: $ConfigProperty$IntegerFormatter;
+        displayValue: string;
+        minValue: number;
+        changeListener: $Runnable;
+        providerID: $UUID;
+        isGlobal: boolean;
+        decimalFormatter: $ConfigProperty$DecimalFormatter;
+        isProviderAvailable: boolean;
+        integerValue: number;
+        booleanValue: boolean;
+        enumDisplayValues: $Map<number, string>;
+        providerName: string;
+        constructor(arg0: $UUID_, arg1: string, arg2: $ConfigProperty$Type_);
+        constructor(arg0: $PropertyProvider, arg1: $ConfigProperty, arg2: boolean);
+        get propertyAvailable(): boolean;
+        get propertyName(): string;
+    }
+}

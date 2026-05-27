@@ -1,0 +1,17 @@
+{
+  "__comment": "Instructions: https://blakesmods.com/docs/cucumber/tags-config",
+  "c:silicon": "null",
+  "c:gems/apatite": "null",
+  "c:dusts/saltpeter": "immersiveengineering:dust_saltpeter",
+  "c:ingots/iridium": "null",
+  "c:ingots/invar": "null",
+  "c:gems/ruby": "silentgems:ruby",
+  "c:dusts/niter": "null",
+  "c:gems/peridot": "silentgems:peridot",
+  "c:ingots/tin": "null",
+  "c:gems/sapphire": "silentgems:sapphire",
+  "c:ingots/bronze": "silentgear:bronze_ingot",
+  "c:ingots/platinum": "null",
+  "c:ingots/graphite": "null",
+  "c:rubbers": "null"
+}

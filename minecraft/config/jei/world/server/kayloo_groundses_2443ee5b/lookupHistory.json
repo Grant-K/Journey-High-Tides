@@ -1,0 +1,5 @@
+[
+  {"version":1},
+  {"ingredient":{"id":"chococraft:loverly_gysahl_green"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"minecraft:dark_oak_leaves"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

@@ -1,0 +1,16 @@
+filename = 'more-immersive-wires-1.21.1-1.1.9.jar'
+name = 'More Immersive Wires'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '72f505491c4fd86e3ad00b9d967ef869eba610b1aae97d5d3d7a3a8fa437a449cd94580581840fd70942b6341f570c484b18ffa448d1cba0cde80845ed7aefd0'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/ekzqyEZL/versions/87TfvCVW/more-immersive-wires-1.21.1-1.1.9.jar'
+
+[update.modrinth]
+mod-id = 'ekzqyEZL'
+version = '87TfvCVW'

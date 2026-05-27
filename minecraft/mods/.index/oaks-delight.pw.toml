@@ -1,0 +1,16 @@
+filename = 'oaksdelight-1.0.9-neoforge-1.21.1.jar'
+name = 'Oaks Delight'
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '644adb6dd765e4a165180c1f3f67c5aa79c12fc54fe187aa084c8150b3b21eb6d5ed4bd743f68405f8bc55ea40a38656a698509c1f467e9b68beac40d374cf2f'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/aWAAHxYu/versions/DagHrUgg/oaksdelight-1.0.9-neoforge-1.21.1.jar'
+
+[update.modrinth]
+mod-id = 'aWAAHxYu'
+version = 'DagHrUgg'

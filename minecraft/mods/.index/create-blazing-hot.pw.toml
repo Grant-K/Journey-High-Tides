@@ -1,0 +1,16 @@
+filename = 'create_blazing_hot-0.7.4+neoforge-mc1.21.1.jar'
+name = 'Create: Blazing Hot'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'beta'
+
+[download]
+hash = 'ad491cf255d42f97c8e6083149e3847c1789bd0b'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 7986545
+project-id = 1070455

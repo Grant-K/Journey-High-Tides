@@ -1,0 +1,1 @@
+{"jarName":"neruina-3.2.2+1.21.1-neoforge.jar","modId":"neruina","name":"Neruina","version":"3.2.2","mixinConfigs":["neruina.mixins.json"],"jarJarMods":[{"jarName":"github-api-2.0-rc.4.jar","mixinConfigs":[],"jarJarMods":[],"pathFromJarJar":"/META-INF/jarjar/"}],"curseForgeHash":2090265207,"modrinthHash":"a1283af4abda12fe8e455a9cf480008ad554f88f"}

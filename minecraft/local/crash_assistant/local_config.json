@@ -1,0 +1,14 @@
+{
+	"shown_reasons": {
+		"Create6Addons": true,
+		"AzureLibAddons": true,
+		"MissingUnsupportedDependencies": true,
+		"ModernFixWatchDog": true,
+		"WasClosedByWindows": true
+	},
+	"analysis": {
+		"jdeps": {
+			"include_nested": false
+		}
+	}
+}

@@ -1,0 +1,6 @@
+[
+  {"version":2},
+  {"ingredient":{"id":"simulated:red_portable_engine"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"create:copper_sheet"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"aether:enchanted_gravitite"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

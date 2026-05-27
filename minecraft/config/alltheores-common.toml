@@ -1,0 +1,8 @@
+# AllTheOres Configuration
+# Only adds AllTheMods ores without adjusting ores from other mods
+
+[general]
+	# Add ores from AllTheMods pack
+	add_atm_ores = true
+	# Do NOT adjust/override ores added by other mods
+	adjust_new_ores = false

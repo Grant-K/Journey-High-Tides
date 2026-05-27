@@ -1,0 +1,169 @@
+import { $AdvancementHolder, $AdvancementHolder_ } from "@package/net/minecraft/advancements";
+import { $ChunkPos } from "@package/net/minecraft/world/level";
+import { $RecipeHolder_, $RecipeHolder } from "@package/net/minecraft/world/item/crafting";
+import { $SoundManager } from "@package/net/minecraft/client/sounds";
+import { $Component_ } from "@package/net/minecraft/network/chat";
+import { $ResourceLocation } from "@package/net/minecraft/resources";
+import { $AdvancementToastAccess } from "@package/blusunrize/immersiveengineering/mixin/accessors/client";
+import { $CallbackInfoReturnable } from "@package/org/spongepowered/asm/mixin/injection/callback";
+import { $Minecraft } from "@package/net/minecraft/client";
+import { $Deque, $List, $BitSet } from "@package/java/util";
+import { $GuiGraphics } from "@package/net/minecraft/client/gui";
+import { $Enum, $Object, $Class } from "@package/java/lang";
+
+declare module "@package/net/minecraft/client/gui/components/toasts" {
+    export class $ToastComponent {
+        addToast(arg0: $Toast_): void;
+        findFreeIndex(arg0: number): number;
+        getToast<T extends $Toast>(arg0: $Class<T>, arg1: $Object): T;
+        getNotificationDisplayTimeMultiplier(): number;
+        getMinecraft(): $Minecraft;
+        render(arg0: $GuiGraphics): void;
+        freeSlots(): number;
+        clear(): void;
+        minecraft: $Minecraft;
+        static NO_SPACE: number;
+        visible: $List<$ToastComponent$ToastInstance<never>>;
+        static SLOT_COUNT: number;
+        queued: $Deque<$Toast>;
+        occupiedSlots: $BitSet;
+        constructor(arg0: $Minecraft);
+        get notificationDisplayTimeMultiplier(): number;
+    }
+    export class $RecipeToast implements $Toast {
+        static addOrUpdate(arg0: $ToastComponent, arg1: $RecipeHolder_<never>): void;
+        render(arg0: $GuiGraphics, arg1: $ToastComponent, arg2: number): $Toast$Visibility;
+        getToken(): $Object;
+        slotCount(): number;
+        width(): number;
+        height(): number;
+        recipes: $List<$RecipeHolder<never>>;
+        static BACKGROUND_SPRITE: $ResourceLocation;
+        constructor(arg0: $RecipeHolder_<never>);
+        get token(): $Object;
+    }
+    export class $SystemToast$SystemToastId {
+        static WORLD_ACCESS_FAILURE: $SystemToast$SystemToastId;
+        static CHUNK_LOAD_FAILURE: $SystemToast$SystemToastId;
+        static WORLD_BACKUP: $SystemToast$SystemToastId;
+        static FILE_DROP_FAILURE: $SystemToast$SystemToastId;
+        static PERIODIC_NOTIFICATION: $SystemToast$SystemToastId;
+        static PACK_LOAD_FAILURE: $SystemToast$SystemToastId;
+        static UNSECURE_SERVER_WARNING: $SystemToast$SystemToastId;
+        static CHUNK_SAVE_FAILURE: $SystemToast$SystemToastId;
+        static PACK_COPY_FAILURE: $SystemToast$SystemToastId;
+        static LOW_DISK_SPACE: $SystemToast$SystemToastId;
+        static NARRATOR_TOGGLE: $SystemToast$SystemToastId;
+        constructor(arg0: number);
+        constructor();
+    }
+    export class $AdvancementToast implements $Toast, $AdvancementToastAccess {
+        handler$bjh000$immersiveui$renderItem(guiGraphics: $GuiGraphics, toastComponent: $ToastComponent, l: number, cir: $CallbackInfoReturnable<any>): void;
+        handler$bjh000$immersiveui$renderItemEnd(guiGraphics: $GuiGraphics, toastComponent: $ToastComponent, l: number, cir: $CallbackInfoReturnable<any>): void;
+        render(arg0: $GuiGraphics, arg1: $ToastComponent, arg2: number): $Toast$Visibility;
+        getToken(): $Object;
+        slotCount(): number;
+        width(): number;
+        height(): number;
+        getAdvancement(): $AdvancementHolder;
+        static DISPLAY_TIME: number;
+        advancement: $AdvancementHolder;
+        static BACKGROUND_SPRITE: $ResourceLocation;
+        constructor(arg0: $AdvancementHolder_);
+        get token(): $Object;
+    }
+    export class $Toast$Visibility extends $Enum<$Toast$Visibility> {
+        playSound(arg0: $SoundManager): void;
+        static values(): $Toast$Visibility[];
+        static valueOf(arg0: string): $Toast$Visibility;
+        static HIDE: $Toast$Visibility;
+        static SHOW: $Toast$Visibility;
+    }
+    /**
+     * Values that may be interpreted as {@link $Toast$Visibility}.
+     */
+    export type $Toast$Visibility_ = "show" | "hide";
+    export class $Toast {
+        static NO_TOKEN: $Object;
+        static SLOT_HEIGHT: number;
+    }
+    export interface $Toast {
+        getToken(): $Object;
+        slotCount(): number;
+        width(): number;
+        height(): number;
+        render(arg0: $GuiGraphics, arg1: $ToastComponent, arg2: number): $Toast$Visibility;
+        get token(): $Object;
+    }
+    /**
+     * Values that may be interpreted as {@link $Toast}.
+     */
+    export type $Toast_ = ((arg0: $GuiGraphics, arg1: $ToastComponent, arg2: number) => $Toast$Visibility_);
+    export class $TutorialToast$Icons extends $Enum<$TutorialToast$Icons> {
+        render(arg0: $GuiGraphics, arg1: number, arg2: number): void;
+        static values(): $TutorialToast$Icons[];
+        static valueOf(arg0: string): $TutorialToast$Icons;
+        static MOUSE: $TutorialToast$Icons;
+        static WOODEN_PLANKS: $TutorialToast$Icons;
+        static MOVEMENT_KEYS: $TutorialToast$Icons;
+        static RIGHT_CLICK: $TutorialToast$Icons;
+        static TREE: $TutorialToast$Icons;
+        static SOCIAL_INTERACTIONS: $TutorialToast$Icons;
+        static RECIPE_BOOK: $TutorialToast$Icons;
+    }
+    /**
+     * Values that may be interpreted as {@link $TutorialToast$Icons}.
+     */
+    export type $TutorialToast$Icons_ = "movement_keys" | "mouse" | "tree" | "recipe_book" | "wooden_planks" | "social_interactions" | "right_click";
+    export class $ToastComponent$ToastInstance<T extends $Toast> {
+        getToast(): T;
+        render(arg0: number, arg1: $GuiGraphics): boolean;
+        animationTime: number;
+        toast: T;
+        visibility: $Toast$Visibility;
+        slotCount: number;
+        visibleTime: number;
+        this$0: $ToastComponent;
+        index: number;
+        static ANIMATION_TIME: number;
+    }
+    export class $SystemToast implements $Toast {
+        static addOrUpdate(arg0: $ToastComponent, arg1: $SystemToast$SystemToastId, arg2: $Component_, arg3: $Component_): void;
+        static onWorldDeleteFailure(arg0: $Minecraft, arg1: string): void;
+        static onWorldAccessFailure(arg0: $Minecraft, arg1: string): void;
+        static onFileDropFailure(arg0: $Minecraft, arg1: number): void;
+        static forceHide(arg0: $ToastComponent, arg1: $SystemToast$SystemToastId): void;
+        forceHide(): void;
+        static multiline(arg0: $Minecraft, arg1: $SystemToast$SystemToastId, arg2: $Component_, arg3: $Component_): $SystemToast;
+        static onPackCopyFailure(arg0: $Minecraft, arg1: string): void;
+        static onChunkSaveFailure(arg0: $Minecraft, arg1: $ChunkPos): void;
+        static onChunkLoadFailure(arg0: $Minecraft, arg1: $ChunkPos): void;
+        static onLowDiskSpace(arg0: $Minecraft): void;
+        width(): number;
+        height(): number;
+        render(arg0: $GuiGraphics, arg1: $ToastComponent, arg2: number): $Toast$Visibility;
+        reset(arg0: $Component_, arg1: $Component_): void;
+        static add(arg0: $ToastComponent, arg1: $SystemToast$SystemToastId, arg2: $Component_, arg3: $Component_): void;
+        slotCount(): number;
+        getToken(): $Object;
+        static BACKGROUND_SPRITE: $ResourceLocation;
+        constructor(arg0: $SystemToast$SystemToastId, arg1: $Component_, arg2: $Component_);
+        get token(): $Object;
+    }
+    export class $TutorialToast implements $Toast {
+        hide(): void;
+        render(arg0: $GuiGraphics, arg1: $ToastComponent, arg2: number): $Toast$Visibility;
+        updateProgress(arg0: number): void;
+        getToken(): $Object;
+        slotCount(): number;
+        width(): number;
+        height(): number;
+        static PROGRESS_BAR_HEIGHT: number;
+        static PROGRESS_BAR_X: number;
+        static PROGRESS_BAR_WIDTH: number;
+        static PROGRESS_BAR_Y: number;
+        static BACKGROUND_SPRITE: $ResourceLocation;
+        constructor(arg0: $TutorialToast$Icons_, arg1: $Component_, arg2: $Component_, arg3: boolean);
+        get token(): $Object;
+    }
+}

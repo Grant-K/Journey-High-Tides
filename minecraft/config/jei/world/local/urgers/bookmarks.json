@@ -1,0 +1,6 @@
+[
+  {"version":2},
+  {"ingredient":{"id":"the_bumblezone:bee_queen_spawn_egg"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"apotheosis:potion_charm"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"chococraft:chocopedia"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

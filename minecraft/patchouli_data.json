@@ -1,0 +1,40 @@
+{
+  "bookGuiScale": 0,
+  "clickedVisualize": false,
+  "bookData": {
+    "chococraft:chocopedia": {
+      "viewedEntries": [
+        "chococraft:gysahls/gysahl_green",
+        "chococraft:chocobos/chicobo",
+        "chococraft:chocobos/chocobo"
+      ],
+      "bookmarks": [],
+      "completedManualQuests": []
+    },
+    "grimoireofgaia:gaiapedia": {
+      "viewedEntries": [
+        "grimoireofgaia:assist/ender_girl",
+        "grimoireofgaia:assist/slime_girl",
+        "grimoireofgaia:assist/yuki_onna",
+        "grimoireofgaia:assist/satyress",
+        "grimoireofgaia:hostile/cyan_flower",
+        "grimoireofgaia:assist/dryad",
+        "grimoireofgaia:assist/wizard_harpy",
+        "grimoireofgaia:assist/valkyrie",
+        "grimoireofgaia:assist/bee",
+        "grimoireofgaia:assist/ender_dragon_girl",
+        "grimoireofgaia:assist/gryphon",
+        "grimoireofgaia:assist/dwarf",
+        "grimoireofgaia:assist/hunter",
+        "grimoireofgaia:assist/goblin",
+        "grimoireofgaia:assist/mermaid",
+        "grimoireofgaia:assist/cyclops",
+        "grimoireofgaia:assist/trader",
+        "grimoireofgaia:assist/cobble_golem",
+        "grimoireofgaia:assist/centaur"
+      ],
+      "bookmarks": [],
+      "completedManualQuests": []
+    }
+  }
+}

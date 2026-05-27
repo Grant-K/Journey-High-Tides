@@ -1,0 +1,735 @@
+import { $JsonObject_ } from "@package/com/google/gson";
+import { $StructureTemplatePool } from "@package/net/minecraft/world/level/levelgen/structure/pools";
+import { $RecipeHolder } from "@package/net/minecraft/world/item/crafting";
+import { $Codec } from "@package/com/mojang/serialization";
+import { $Tag_, $Tag, $CompoundTag, $CompoundTag_ } from "@package/net/minecraft/nbt";
+import { $Either } from "@package/com/mojang/datafixers/util";
+import { $CompletableFuture } from "@package/java/util/concurrent";
+import { $ObjectiveCriteria } from "@package/net/minecraft/world/scores/criteria";
+import { $EntityType, $Entity } from "@package/net/minecraft/world/entity";
+import { $StringReader } from "@package/com/mojang/brigadier";
+import { $ParticleOptions } from "@package/net/minecraft/core/particles";
+import { $Attribute } from "@package/net/minecraft/world/entity/ai/attributes";
+import { $UUID, $List, $Collection_, $List_, $Collection } from "@package/java/util";
+import { $AdvancementHolder } from "@package/net/minecraft/advancements";
+import { $Supplier_, $Consumer_, $Predicate_, $Predicate, $Supplier } from "@package/java/util/function";
+import { $HolderSet$Named, $Holder$Reference, $Registry, $HolderLookup$Provider, $Holder } from "@package/net/minecraft/core";
+import { $Object2IntMap } from "@package/it/unimi/dsi/fastutil/objects";
+import { $ServerLevel, $ServerPlayer } from "@package/net/minecraft/server/level";
+import { $ChatFormatting } from "@package/net/minecraft";
+import { $Dynamic2CommandExceptionType, $Dynamic3CommandExceptionType, $DynamicCommandExceptionType, $SimpleCommandExceptionType } from "@package/com/mojang/brigadier/exceptions";
+import { $Suggestions, $SuggestionProvider, $SuggestionsBuilder } from "@package/com/mojang/brigadier/suggestion";
+import { $Enchantment } from "@package/net/minecraft/world/item/enchantment";
+import { $FriendlyByteBuf } from "@package/net/minecraft/network";
+import { $GameProfile } from "@package/com/mojang/authlib";
+import { $ConfiguredFeature } from "@package/net/minecraft/world/level/levelgen/feature";
+import { $SlotRange } from "@package/net/minecraft/world/inventory";
+import { $Enum, $Record, $Object } from "@package/java/lang";
+import { $CommandContext } from "@package/com/mojang/brigadier/context";
+import { $Structure } from "@package/net/minecraft/world/level/levelgen/structure";
+import { $Heightmap$Types } from "@package/net/minecraft/world/level/levelgen";
+import { $LootTable } from "@package/net/minecraft/world/level/storage/loot";
+import { $GameType } from "@package/net/minecraft/world/level";
+import { $TagKey, $TagKey_ } from "@package/net/minecraft/tags";
+import { $MessageSignature_, $MessageSignature, $Style, $SignableCommand_, $PlayerChatMessage, $Component } from "@package/net/minecraft/network/chat";
+import { $EntitySelector } from "@package/net/minecraft/commands/arguments/selector";
+import { $MobEffect } from "@package/net/minecraft/world/effect";
+import { $LootItemFunction } from "@package/net/minecraft/world/level/storage/loot/functions";
+import { $MinMaxBounds$Doubles, $MinMaxBounds$Ints, $MinMaxBounds } from "@package/net/minecraft/advancements/critereon";
+import { $CommandBuildContext, $CommandSourceStack } from "@package/net/minecraft/commands";
+import { $ResourceKey_, $ResourceKey, $ResourceLocation } from "@package/net/minecraft/resources";
+import { $LootItemCondition } from "@package/net/minecraft/world/level/storage/loot/predicates";
+import { $Objective, $PlayerTeam, $ScoreHolder, $DisplaySlot, $ScoreAccess } from "@package/net/minecraft/world/scores";
+import { $Mirror, $Rotation } from "@package/net/minecraft/world/level/block";
+import { $ArgumentTypeInfo$Template, $ArgumentTypeInfo } from "@package/net/minecraft/commands/synchronization";
+import { $Vec3 } from "@package/net/minecraft/world/phys";
+import { $StatType_ } from "@package/net/minecraft/stats";
+import { $ArgumentType } from "@package/com/mojang/brigadier/arguments";
+export * as coordinates from "@package/net/minecraft/commands/arguments/coordinates";
+export * as item from "@package/net/minecraft/commands/arguments/item";
+export * as selector from "@package/net/minecraft/commands/arguments/selector";
+export * as blocks from "@package/net/minecraft/commands/arguments/blocks";
+
+declare module "@package/net/minecraft/commands/arguments" {
+    export class $EntityAnchorArgument implements $ArgumentType<$EntityAnchorArgument$Anchor> {
+        static getAnchor(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $EntityAnchorArgument$Anchor;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        getExamples(): $Collection<string>;
+        static anchor(): $EntityAnchorArgument;
+        parse<S>(arg0: $StringReader, arg1: S): $EntityAnchorArgument$Anchor;
+        parse(arg0: $StringReader): $EntityAnchorArgument$Anchor;
+        constructor();
+        get examples(): $Collection<string>;
+    }
+    export class $NbtPathArgument$AllElementsNode implements $NbtPathArgument$Node {
+    }
+    export class $ScoreboardSlotArgument implements $ArgumentType<$DisplaySlot> {
+        static displaySlot(): $ScoreboardSlotArgument;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        static getDisplaySlot(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $DisplaySlot;
+        getExamples(): $Collection<string>;
+        parse<S>(arg0: $StringReader, arg1: S): $DisplaySlot;
+        parse(arg0: $StringReader): $DisplaySlot;
+        static ERROR_INVALID_VALUE: $DynamicCommandExceptionType;
+        get examples(): $Collection<string>;
+    }
+    export class $ResourceOrIdArgument$LootPredicateArgument extends $ResourceOrIdArgument<$LootItemCondition> {
+        parse(arg0: $StringReader): $Holder<$LootItemCondition>;
+        static ERROR_FAILED_TO_PARSE: $DynamicCommandExceptionType;
+    }
+    export class $ResourceKeyArgument$Info<T> implements $ArgumentTypeInfo<$ResourceKeyArgument<T>, $ResourceKeyArgument$Info$Template> {
+        serializeToNetwork(arg0: $ResourceKeyArgument$Info$Template, arg1: $FriendlyByteBuf): void;
+        serializeToJson(arg0: $ResourceKeyArgument$Info$Template, arg1: $JsonObject_): void;
+        unpack(arg0: $ResourceKeyArgument<$ResourceKeyArgument$Info$Template>): $ResourceKeyArgument$Info$Template;
+        deserializeFromNetwork(arg0: $FriendlyByteBuf): $ResourceKeyArgument$Info$Template;
+        constructor();
+    }
+    export class $ArgumentSignatures$Entry extends $Record {
+        signature(): $MessageSignature;
+        name(): string;
+        write(arg0: $FriendlyByteBuf): void;
+        constructor(arg0: $FriendlyByteBuf);
+        constructor(arg0: string, arg1: $MessageSignature_);
+    }
+    /**
+     * Values that may be interpreted as {@link $ArgumentSignatures$Entry}.
+     */
+    export type $ArgumentSignatures$Entry_ = { name?: string, signature?: $MessageSignature_,  } | [name?: string, signature?: $MessageSignature_, ];
+    export class $ResourceOrIdArgument<T> implements $ArgumentType<$Holder<T>> {
+        static getLootTable(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Holder<$LootTable>;
+        static lootTable(arg0: $CommandBuildContext): $ResourceOrIdArgument$LootTableArgument;
+        static lootPredicate(arg0: $CommandBuildContext): $ResourceOrIdArgument$LootPredicateArgument;
+        static lootModifier(arg0: $CommandBuildContext): $ResourceOrIdArgument$LootModifierArgument;
+        static getLootModifier(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Holder<$LootItemFunction>;
+        static getLootPredicate(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Holder<$LootItemCondition>;
+        getExamples(): $Collection<string>;
+        parse(arg0: $StringReader): $Holder<$Holder<T>>;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        parse<S>(arg0: $StringReader, arg1: S): $Holder<T>;
+        static ERROR_FAILED_TO_PARSE: $DynamicCommandExceptionType;
+        get examples(): $Collection<string>;
+    }
+    export class $ObjectiveArgument implements $ArgumentType<string> {
+        static objective(): $ObjectiveArgument;
+        static getObjective(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Objective;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        static getWritableObjective(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Objective;
+        getExamples(): $Collection<string>;
+        parse<S>(arg0: $StringReader, arg1: S): string;
+        parse(arg0: $StringReader): string;
+        constructor();
+        get examples(): $Collection<string>;
+    }
+    export class $ArgumentSignatures$Signer {
+    }
+    export interface $ArgumentSignatures$Signer {
+        sign(arg0: string): $MessageSignature;
+    }
+    /**
+     * Values that may be interpreted as {@link $ArgumentSignatures$Signer}.
+     */
+    export type $ArgumentSignatures$Signer_ = ((arg0: string) => $MessageSignature_);
+    export class $ResourceOrIdArgument$LootTableArgument extends $ResourceOrIdArgument<$LootTable> {
+        parse(arg0: $StringReader): $Holder<$LootTable>;
+        static ERROR_FAILED_TO_PARSE: $DynamicCommandExceptionType;
+    }
+    export class $ScoreHolderArgument implements $ArgumentType<$ScoreHolderArgument$Result> {
+        static getNamesWithDefaultWildcard(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Collection<$ScoreHolder>;
+        static scoreHolder(): $ScoreHolderArgument;
+        static scoreHolders(): $ScoreHolderArgument;
+        static getNames(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Collection<$ScoreHolder>;
+        static getNames(arg0: $CommandContext<$CommandSourceStack>, arg1: string, arg2: $Supplier_<$Collection<$ScoreHolder>>): $Collection<$ScoreHolder>;
+        getExamples(): $Collection<string>;
+        static getName(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $ScoreHolder;
+        parse<S>(arg0: $StringReader, arg1: S): $ScoreHolderArgument$Result;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        parse(arg0: $StringReader): $ScoreHolderArgument$Result;
+        static SUGGEST_SCORE_HOLDERS: $SuggestionProvider<$CommandSourceStack>;
+        constructor(arg0: boolean);
+        get examples(): $Collection<string>;
+    }
+    export class $UuidArgument implements $ArgumentType<$UUID> {
+        static getUuid(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $UUID;
+        getExamples(): $Collection<string>;
+        static uuid(): $UuidArgument;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        parse<S>(arg0: $StringReader, arg1: S): $UUID;
+        parse(arg0: $StringReader): $UUID;
+        static ERROR_INVALID_UUID: $SimpleCommandExceptionType;
+        constructor();
+        get examples(): $Collection<string>;
+    }
+    export class $TemplateRotationArgument extends $StringRepresentableArgument<$Rotation> {
+        static getRotation(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Rotation;
+        static templateRotation(): $TemplateRotationArgument;
+    }
+    export class $MessageArgument$Message extends $Record {
+        toComponent(arg0: $CommandSourceStack, arg1: boolean): $Component;
+        static parseText(arg0: $StringReader, arg1: boolean): $MessageArgument$Message;
+        text(): string;
+        parts(): $MessageArgument$Part[];
+        constructor(text: string, parts: $MessageArgument$Part_[]);
+    }
+    /**
+     * Values that may be interpreted as {@link $MessageArgument$Message}.
+     */
+    export type $MessageArgument$Message_ = { text?: string, parts?: $MessageArgument$Part_[],  } | [text?: string, parts?: $MessageArgument$Part_[], ];
+    export class $AngleArgument implements $ArgumentType<$AngleArgument$SingleAngle> {
+        static angle(): $AngleArgument;
+        static getAngle(arg0: $CommandContext<$CommandSourceStack>, arg1: string): number;
+        getExamples(): $Collection<string>;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        parse<S>(arg0: $StringReader, arg1: S): $AngleArgument$SingleAngle;
+        parse(arg0: $StringReader): $AngleArgument$SingleAngle;
+        static ERROR_INVALID_ANGLE: $SimpleCommandExceptionType;
+        static ERROR_NOT_COMPLETE: $SimpleCommandExceptionType;
+        constructor();
+        get examples(): $Collection<string>;
+    }
+    export class $RangeArgument<T extends $MinMaxBounds<never>> {
+        static intRange(): $RangeArgument$Ints;
+        static floatRange(): $RangeArgument$Floats;
+    }
+    export interface $RangeArgument<T extends $MinMaxBounds<never>> extends $ArgumentType<T> {
+    }
+    /**
+     * Values that may be interpreted as {@link $RangeArgument}.
+     */
+    export type $RangeArgument_<T> = (() => void);
+    export class $OperationArgument$Operation {
+    }
+    export interface $OperationArgument$Operation {
+        apply(arg0: $ScoreAccess, arg1: $ScoreAccess): void;
+    }
+    /**
+     * Values that may be interpreted as {@link $OperationArgument$Operation}.
+     */
+    export type $OperationArgument$Operation_ = ((arg0: $ScoreAccess, arg1: $ScoreAccess) => void);
+    export class $ResourceOrTagArgument$Info$Template implements $ArgumentTypeInfo$Template<$ResourceOrTagArgument<T>> {
+        type(): $ArgumentTypeInfo<$ResourceOrTagArgument<T>, never>;
+        instantiate(arg0: $CommandBuildContext): $ResourceOrTagArgument<T>;
+    }
+    export class $ResourceOrIdArgument$LootModifierArgument extends $ResourceOrIdArgument<$LootItemFunction> {
+        parse(arg0: $StringReader): $Holder<$LootItemFunction>;
+        static ERROR_FAILED_TO_PARSE: $DynamicCommandExceptionType;
+    }
+    export class $StringRepresentableArgument<T extends $Enum<T>> implements $ArgumentType<T> {
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        getExamples(): $Collection<string>;
+        parse(arg0: $StringReader): T;
+        parse<S>(arg0: $StringReader, arg1: S): T;
+        get examples(): $Collection<string>;
+    }
+    export class $NbtPathArgument$MatchElementNode implements $NbtPathArgument$Node {
+    }
+    export class $DimensionArgument implements $ArgumentType<$ResourceLocation> {
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        getExamples(): $Collection<string>;
+        static getDimension(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $ServerLevel;
+        static dimension(): $DimensionArgument;
+        parse<S>(arg0: $StringReader, arg1: S): $ResourceLocation;
+        parse(arg0: $StringReader): $ResourceLocation;
+        constructor();
+        get examples(): $Collection<string>;
+    }
+    export class $NbtPathArgument$CompoundChildNode implements $NbtPathArgument$Node {
+    }
+    export class $NbtPathArgument$MatchObjectNode implements $NbtPathArgument$Node {
+    }
+    export class $RangeArgument$Floats implements $RangeArgument<$MinMaxBounds$Doubles> {
+        static getRange(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $MinMaxBounds$Doubles;
+        getExamples(): $Collection<string>;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        parse<S>(arg0: $StringReader, arg1: S): $MinMaxBounds$Doubles;
+        parse(arg0: $StringReader): $MinMaxBounds$Doubles;
+        constructor();
+        get examples(): $Collection<string>;
+    }
+    export class $NbtPathArgument$IndexedElementNode implements $NbtPathArgument$Node {
+    }
+    export class $ScoreHolderArgument$Info implements $ArgumentTypeInfo<$ScoreHolderArgument, $ScoreHolderArgument$Info$Template> {
+        serializeToNetwork(arg0: $ScoreHolderArgument$Info$Template, arg1: $FriendlyByteBuf): void;
+        serializeToJson(arg0: $ScoreHolderArgument$Info$Template, arg1: $JsonObject_): void;
+        unpack(arg0: $ScoreHolderArgument): $ScoreHolderArgument$Info$Template;
+        deserializeFromNetwork(arg0: $FriendlyByteBuf): $ScoreHolderArgument$Info$Template;
+        constructor();
+    }
+    export class $ResourceOrTagArgument$Result<T> {
+    }
+    export interface $ResourceOrTagArgument$Result<T> extends $Predicate<$Holder<T>> {
+        asPrintable(): string;
+        unwrap(): $Either<$Holder$Reference<$Holder<T>>, $HolderSet$Named<$Holder<T>>>;
+        cast<E>(arg0: $ResourceKey_<$Registry<E>>): ($ResourceOrTagArgument$Result<E>) | undefined;
+    }
+    export class $NbtPathArgument$MatchRootObjectNode implements $NbtPathArgument$Node {
+    }
+    export class $NbtPathArgument$Node {
+    }
+    export interface $NbtPathArgument$Node {
+    }
+    export class $ResourceKeyArgument<T> implements $ArgumentType<$ResourceKey<T>> {
+        static getConfiguredFeature(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Holder$Reference<$ConfiguredFeature<never, never>>;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        static getStructureTemplatePool(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Holder$Reference<$StructureTemplatePool>;
+        getExamples(): $Collection<string>;
+        static getStructure(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Holder$Reference<$Structure>;
+        static key<T>(arg0: $ResourceKey_<$Registry<T>>): $ResourceKeyArgument<T>;
+        parse<S>(arg0: $StringReader, arg1: S): $ResourceKey<T>;
+        parse(arg0: $StringReader): $ResourceKey<T>;
+        constructor(arg0: $ResourceKey_<$Registry<$ResourceKey<T>>>);
+        get examples(): $Collection<string>;
+    }
+    export class $TimeArgument implements $ArgumentType<number> {
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        getExamples(): $Collection<string>;
+        static time(): $TimeArgument;
+        static time(arg0: number): $TimeArgument;
+        parse(arg0: $StringReader): number;
+        parse<S>(arg0: $StringReader, arg1: S): number;
+        get examples(): $Collection<string>;
+    }
+    export class $GameProfileArgument implements $ArgumentType<$GameProfileArgument$Result> {
+        static gameProfile(): $GameProfileArgument;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        static getGameProfiles(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Collection<$GameProfile>;
+        getExamples(): $Collection<string>;
+        parse(arg0: $StringReader): $GameProfileArgument$Result;
+        parse<S>(arg0: $StringReader, arg1: S): $GameProfileArgument$Result;
+        static ERROR_UNKNOWN_PLAYER: $SimpleCommandExceptionType;
+        constructor();
+        get examples(): $Collection<string>;
+    }
+    export class $EntityArgument$Info implements $ArgumentTypeInfo<$EntityArgument, $EntityArgument$Info$Template> {
+        serializeToNetwork(arg0: $EntityArgument$Info$Template, arg1: $FriendlyByteBuf): void;
+        serializeToJson(arg0: $EntityArgument$Info$Template, arg1: $JsonObject_): void;
+        unpack(arg0: $EntityArgument): $EntityArgument$Info$Template;
+        deserializeFromNetwork(arg0: $FriendlyByteBuf): $EntityArgument$Info$Template;
+        constructor();
+    }
+    export class $MessageArgument implements $SignedArgument<$MessageArgument$Message> {
+        static resolveChatMessage(arg0: $CommandContext<$CommandSourceStack>, arg1: string, arg2: $Consumer_<$PlayerChatMessage>): void;
+        getExamples(): $Collection<string>;
+        static getMessage(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Component;
+        static message(): $MessageArgument;
+        parse(arg0: $StringReader): $MessageArgument$Message;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        parse<S>(arg0: $StringReader, arg1: S): $MessageArgument$Message;
+        constructor();
+        get examples(): $Collection<string>;
+    }
+    export class $ComponentArgument implements $ArgumentType<$Component> {
+        static textComponent(arg0: $CommandBuildContext): $ComponentArgument;
+        getExamples(): $Collection<string>;
+        static getComponent(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Component;
+        parse(arg0: $StringReader): $Component;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        parse<S>(arg0: $StringReader, arg1: S): $Component;
+        static ERROR_INVALID_JSON: $DynamicCommandExceptionType;
+        get examples(): $Collection<string>;
+    }
+    export class $SlotArgument implements $ArgumentType<number> {
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        getExamples(): $Collection<string>;
+        static getSlot(arg0: $CommandContext<$CommandSourceStack>, arg1: string): number;
+        static slot(): $SlotArgument;
+        parse<S>(arg0: $StringReader, arg1: S): number;
+        parse(arg0: $StringReader): number;
+        constructor();
+        get examples(): $Collection<string>;
+    }
+    export class $ScoreHolderArgument$Result {
+    }
+    export interface $ScoreHolderArgument$Result {
+        getNames(arg0: $CommandSourceStack, arg1: $Supplier_<$Collection<$ScoreHolder>>): $Collection<$ScoreHolder>;
+    }
+    /**
+     * Values that may be interpreted as {@link $ScoreHolderArgument$Result}.
+     */
+    export type $ScoreHolderArgument$Result_ = ((arg0: $CommandSourceStack, arg1: $Supplier<$Collection<$ScoreHolder>>) => $Collection_<$ScoreHolder>);
+    export class $ResourceOrTagKeyArgument$Result<T> {
+    }
+    export interface $ResourceOrTagKeyArgument$Result<T> extends $Predicate<$Holder<T>> {
+        asPrintable(): string;
+        unwrap(): $Either<$ResourceKey<$Holder<T>>, $TagKey<$Holder<T>>>;
+        cast<E>(arg0: $ResourceKey_<$Registry<E>>): ($ResourceOrTagKeyArgument$Result<E>) | undefined;
+    }
+    export class $ResourceKeyArgument$Info$Template implements $ArgumentTypeInfo$Template<$ResourceKeyArgument<T>> {
+        type(): $ArgumentTypeInfo<$ResourceKeyArgument<T>, never>;
+        instantiate(arg0: $CommandBuildContext): $ResourceKeyArgument<T>;
+    }
+    export class $ResourceArgument$Info$Template implements $ArgumentTypeInfo$Template<$ResourceArgument<T>> {
+        type(): $ArgumentTypeInfo<$ResourceArgument<T>, never>;
+        instantiate(arg0: $CommandBuildContext): $ResourceArgument<T>;
+    }
+    export class $GameModeArgument implements $ArgumentType<$GameType> {
+        static gameMode(): $GameModeArgument;
+        static getGameMode(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $GameType;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        getExamples(): $Collection<string>;
+        parse<S>(arg0: $StringReader, arg1: S): $GameType;
+        parse(arg0: $StringReader): $GameType;
+        constructor();
+        get examples(): $Collection<string>;
+    }
+    export class $ArgumentSignatures extends $Record {
+        static signCommand(arg0: $SignableCommand_<never>, arg1: $ArgumentSignatures$Signer_): $ArgumentSignatures;
+        write(arg0: $FriendlyByteBuf): void;
+        entries(): $List<$ArgumentSignatures$Entry>;
+        static EMPTY: $ArgumentSignatures;
+        constructor(arg0: $FriendlyByteBuf);
+        constructor(arg0: $List_<$ArgumentSignatures$Entry_>);
+    }
+    /**
+     * Values that may be interpreted as {@link $ArgumentSignatures}.
+     */
+    export type $ArgumentSignatures_ = { entries?: $List_<$ArgumentSignatures$Entry_>,  } | [entries?: $List_<$ArgumentSignatures$Entry_>, ];
+    export class $EntityArgument implements $ArgumentType<$EntitySelector> {
+        static player(): $EntityArgument;
+        static players(): $EntityArgument;
+        static getPlayer(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $ServerPlayer;
+        static getPlayers(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Collection<$ServerPlayer>;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        static getOptionalEntities(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Collection<$Entity>;
+        static getOptionalPlayers(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Collection<$ServerPlayer>;
+        static getEntities(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Collection<$Entity>;
+        static entities(): $EntityArgument;
+        static entity(): $EntityArgument;
+        static getEntity(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Entity;
+        getExamples(): $Collection<string>;
+        parse(arg0: $StringReader): $EntitySelector;
+        parse<S>(arg0: $StringReader, arg1: S): $EntitySelector;
+        static ERROR_SELECTORS_NOT_ALLOWED: $SimpleCommandExceptionType;
+        static NO_PLAYERS_FOUND: $SimpleCommandExceptionType;
+        static NO_ENTITIES_FOUND: $SimpleCommandExceptionType;
+        static ERROR_NOT_SINGLE_ENTITY: $SimpleCommandExceptionType;
+        static ERROR_NOT_SINGLE_PLAYER: $SimpleCommandExceptionType;
+        static ERROR_ONLY_PLAYERS_ALLOWED: $SimpleCommandExceptionType;
+        get examples(): $Collection<string>;
+    }
+    export class $OperationArgument implements $ArgumentType<$OperationArgument$Operation> {
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        getExamples(): $Collection<string>;
+        static operation(): $OperationArgument;
+        static getOperation(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $OperationArgument$Operation;
+        parse(arg0: $StringReader): $OperationArgument$Operation;
+        parse<S>(arg0: $StringReader, arg1: S): $OperationArgument$Operation;
+        constructor();
+        get examples(): $Collection<string>;
+    }
+    export class $ResourceOrTagKeyArgument<T> implements $ArgumentType<$ResourceOrTagKeyArgument$Result<T>> {
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        static resourceOrTagKey<T>(arg0: $ResourceKey_<$Registry<T>>): $ResourceOrTagKeyArgument<T>;
+        static getResourceOrTagKey<T>(arg0: $CommandContext<$CommandSourceStack>, arg1: string, arg2: $ResourceKey_<$Registry<T>>, arg3: $DynamicCommandExceptionType): $ResourceOrTagKeyArgument$Result<T>;
+        getExamples(): $Collection<string>;
+        parse<S>(arg0: $StringReader, arg1: S): $ResourceOrTagKeyArgument$Result<T>;
+        parse(arg0: $StringReader): $ResourceOrTagKeyArgument$Result<T>;
+        constructor(arg0: $ResourceKey_<$Registry<$ResourceOrTagKeyArgument$Result<T>>>);
+        get examples(): $Collection<string>;
+    }
+    export class $SignedArgument<T> {
+    }
+    export interface $SignedArgument<T> extends $ArgumentType<T> {
+    }
+    /**
+     * Values that may be interpreted as {@link $SignedArgument}.
+     */
+    export type $SignedArgument_<T> = (() => void);
+    export class $TimeArgument$Info$Template implements $ArgumentTypeInfo$Template<$TimeArgument> {
+        type(): $ArgumentTypeInfo<$TimeArgument, never>;
+        instantiate(arg0: $CommandBuildContext): $TimeArgument;
+    }
+    export class $ScoreHolderArgument$Info$Template implements $ArgumentTypeInfo$Template<$ScoreHolderArgument> {
+        type(): $ArgumentTypeInfo<$ScoreHolderArgument, never>;
+        instantiate(arg0: $CommandBuildContext): $ScoreHolderArgument;
+    }
+    export class $MessageArgument$Part extends $Record {
+        toComponent(arg0: $CommandSourceStack): $Component;
+        selector(): $EntitySelector;
+        end(): number;
+        start(): number;
+        constructor(start: number, end: number, selector: $EntitySelector);
+    }
+    /**
+     * Values that may be interpreted as {@link $MessageArgument$Part}.
+     */
+    export type $MessageArgument$Part_ = { selector?: $EntitySelector, end?: number, start?: number,  } | [selector?: $EntitySelector, end?: number, start?: number, ];
+    export class $ParticleArgument implements $ArgumentType<$ParticleOptions> {
+        static particle(arg0: $CommandBuildContext): $ParticleArgument;
+        static getParticle(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $ParticleOptions;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        static readParticle(arg0: $StringReader, arg1: $HolderLookup$Provider): $ParticleOptions;
+        getExamples(): $Collection<string>;
+        parse<S>(arg0: $StringReader, arg1: S): $ParticleOptions;
+        parse(arg0: $StringReader): $ParticleOptions;
+        static ERROR_INVALID_OPTIONS: $DynamicCommandExceptionType;
+        static ERROR_UNKNOWN_PARTICLE: $DynamicCommandExceptionType;
+        constructor(arg0: $CommandBuildContext);
+        get examples(): $Collection<string>;
+    }
+    export class $NbtPathArgument$NbtPath {
+        countMatching(arg0: $Tag_): number;
+        static isTooDeep(arg0: $Tag_, arg1: number): boolean;
+        getOrCreate(arg0: $Tag_, arg1: $Supplier_<$Tag>): $List<$Tag>;
+        asString(): string;
+        remove(arg0: $Tag_): number;
+        get(arg0: $Tag_): $List<$Tag>;
+        insert(arg0: number, arg1: $CompoundTag_, arg2: $List_<$Tag_>): number;
+        static of(arg0: string): $NbtPathArgument$NbtPath;
+        set(arg0: $Tag_, arg1: $Tag_): number;
+        static CODEC: $Codec<$NbtPathArgument$NbtPath>;
+        constructor(arg0: string, arg1: $NbtPathArgument$Node[], arg2: $Object2IntMap<$NbtPathArgument$Node>);
+    }
+    export class $EntityAnchorArgument$Anchor extends $Enum<$EntityAnchorArgument$Anchor> {
+        static getByName(arg0: string): $EntityAnchorArgument$Anchor;
+        static values(): $EntityAnchorArgument$Anchor[];
+        static valueOf(arg0: string): $EntityAnchorArgument$Anchor;
+        apply(arg0: $Entity): $Vec3;
+        apply(arg0: $CommandSourceStack): $Vec3;
+        static EYES: $EntityAnchorArgument$Anchor;
+        static FEET: $EntityAnchorArgument$Anchor;
+    }
+    /**
+     * Values that may be interpreted as {@link $EntityAnchorArgument$Anchor}.
+     */
+    export type $EntityAnchorArgument$Anchor_ = "feet" | "eyes";
+    export class $ResourceOrTagKeyArgument$ResourceResult<T> extends $Record implements $ResourceOrTagKeyArgument$Result<T> {
+        or(arg0: $Predicate_<T>): $Predicate<T>;
+        negate(): $Predicate<T>;
+        and(arg0: $Predicate_<T>): $Predicate<T>;
+    }
+    /**
+     * Values that may be interpreted as {@link $ResourceOrTagKeyArgument$ResourceResult}.
+     */
+    export type $ResourceOrTagKeyArgument$ResourceResult_<T> = { key?: $ResourceKey_<any>,  } | [key?: $ResourceKey_<any>, ];
+    export class $EntityArgument$Info$Template implements $ArgumentTypeInfo$Template<$EntityArgument> {
+        type(): $ArgumentTypeInfo<$EntityArgument, never>;
+        instantiate(arg0: $CommandBuildContext): $EntityArgument;
+    }
+    export class $SlotsArgument implements $ArgumentType<$SlotRange> {
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        getExamples(): $Collection<string>;
+        static slots(): $SlotsArgument;
+        static getSlots(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $SlotRange;
+        parse<S>(arg0: $StringReader, arg1: S): $SlotRange;
+        parse(arg0: $StringReader): $SlotRange;
+        constructor();
+        get examples(): $Collection<string>;
+    }
+    export class $GameProfileArgument$Result {
+    }
+    export interface $GameProfileArgument$Result {
+        getNames(arg0: $CommandSourceStack): $Collection<$GameProfile>;
+    }
+    /**
+     * Values that may be interpreted as {@link $GameProfileArgument$Result}.
+     */
+    export type $GameProfileArgument$Result_ = ((arg0: $CommandSourceStack) => $Collection_<$GameProfile>);
+    export class $NbtTagArgument implements $ArgumentType<$Tag> {
+        static nbtTag(): $NbtTagArgument;
+        static getNbtTag<S>(arg0: $CommandContext<S>, arg1: string): $Tag;
+        getExamples(): $Collection<string>;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        parse<S>(arg0: $StringReader, arg1: S): $Tag;
+        parse(arg0: $StringReader): $Tag;
+        get examples(): $Collection<string>;
+    }
+    export class $ResourceLocationArgument implements $ArgumentType<$ResourceLocation> {
+        static getRecipe(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $RecipeHolder<never>;
+        static getAdvancement(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $AdvancementHolder;
+        getExamples(): $Collection<string>;
+        static id(): $ResourceLocationArgument;
+        static getId(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $ResourceLocation;
+        parse(arg0: $StringReader): $ResourceLocation;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        parse<S>(arg0: $StringReader, arg1: S): $ResourceLocation;
+        constructor();
+        get examples(): $Collection<string>;
+    }
+    export class $TimeArgument$Info implements $ArgumentTypeInfo<$TimeArgument, $TimeArgument$Info$Template> {
+        serializeToNetwork(arg0: $TimeArgument$Info$Template, arg1: $FriendlyByteBuf): void;
+        serializeToJson(arg0: $TimeArgument$Info$Template, arg1: $JsonObject_): void;
+        unpack(arg0: $TimeArgument): $TimeArgument$Info$Template;
+        deserializeFromNetwork(arg0: $FriendlyByteBuf): $TimeArgument$Info$Template;
+        constructor();
+    }
+    export class $ResourceOrTagKeyArgument$Info$Template implements $ArgumentTypeInfo$Template<$ResourceOrTagKeyArgument<T>> {
+        type(): $ArgumentTypeInfo<$ResourceOrTagKeyArgument<T>, never>;
+        instantiate(arg0: $CommandBuildContext): $ResourceOrTagKeyArgument<T>;
+    }
+    export class $ResourceOrTagArgument$TagResult<T> extends $Record implements $ResourceOrTagArgument$Result<T> {
+        or(arg0: $Predicate_<T>): $Predicate<T>;
+        negate(): $Predicate<T>;
+        and(arg0: $Predicate_<T>): $Predicate<T>;
+    }
+    /**
+     * Values that may be interpreted as {@link $ResourceOrTagArgument$TagResult}.
+     */
+    export type $ResourceOrTagArgument$TagResult_<T> = { tag?: $HolderSet$Named<any>,  } | [tag?: $HolderSet$Named<any>, ];
+    export class $TeamArgument implements $ArgumentType<string> {
+        static team(): $TeamArgument;
+        static getTeam(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $PlayerTeam;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        getExamples(): $Collection<string>;
+        parse<S>(arg0: $StringReader, arg1: S): string;
+        parse(arg0: $StringReader): string;
+        constructor();
+        get examples(): $Collection<string>;
+    }
+    export class $CompoundTagArgument implements $ArgumentType<$CompoundTag> {
+        static compoundTag(): $CompoundTagArgument;
+        static getCompoundTag<S>(arg0: $CommandContext<S>, arg1: string): $CompoundTag;
+        getExamples(): $Collection<string>;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        parse<S>(arg0: $StringReader, arg1: S): $CompoundTag;
+        parse(arg0: $StringReader): $CompoundTag;
+        get examples(): $Collection<string>;
+    }
+    export class $ResourceOrTagKeyArgument$TagResult<T> extends $Record implements $ResourceOrTagKeyArgument$Result<T> {
+        or(arg0: $Predicate_<T>): $Predicate<T>;
+        negate(): $Predicate<T>;
+        and(arg0: $Predicate_<T>): $Predicate<T>;
+    }
+    /**
+     * Values that may be interpreted as {@link $ResourceOrTagKeyArgument$TagResult}.
+     */
+    export type $ResourceOrTagKeyArgument$TagResult_<T> = { key?: $TagKey_<any>,  } | [key?: $TagKey_<any>, ];
+    export class $ScoreHolderArgument$SelectorResult implements $ScoreHolderArgument$Result {
+        getNames(arg0: $CommandSourceStack, arg1: $Supplier_<$Collection<$ScoreHolder>>): $Collection<$ScoreHolder>;
+        constructor(arg0: $EntitySelector);
+    }
+    export class $ResourceOrTagArgument$Info<T> implements $ArgumentTypeInfo<$ResourceOrTagArgument<T>, $ResourceOrTagArgument$Info$Template> {
+        serializeToNetwork(arg0: $ResourceOrTagArgument$Info$Template, arg1: $FriendlyByteBuf): void;
+        serializeToJson(arg0: $ResourceOrTagArgument$Info$Template, arg1: $JsonObject_): void;
+        unpack(arg0: $ResourceOrTagArgument<$ResourceOrTagArgument$Info$Template>): $ResourceOrTagArgument$Info$Template;
+        deserializeFromNetwork(arg0: $FriendlyByteBuf): $ResourceOrTagArgument$Info$Template;
+        constructor();
+    }
+    export class $NbtPathArgument implements $ArgumentType<$NbtPathArgument$NbtPath> {
+        static nbtPath(): $NbtPathArgument;
+        getExamples(): $Collection<string>;
+        static getPath(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $NbtPathArgument$NbtPath;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        parse<S>(arg0: $StringReader, arg1: S): $NbtPathArgument$NbtPath;
+        parse(arg0: $StringReader): $NbtPathArgument$NbtPath;
+        static ERROR_DATA_TOO_DEEP: $SimpleCommandExceptionType;
+        static ERROR_NOTHING_FOUND: $DynamicCommandExceptionType;
+        static ERROR_INVALID_NODE: $SimpleCommandExceptionType;
+        constructor();
+        get examples(): $Collection<string>;
+    }
+    export class $ResourceOrTagKeyArgument$Info<T> implements $ArgumentTypeInfo<$ResourceOrTagKeyArgument<T>, $ResourceOrTagKeyArgument$Info$Template> {
+        serializeToNetwork(arg0: $ResourceOrTagKeyArgument$Info$Template, arg1: $FriendlyByteBuf): void;
+        serializeToJson(arg0: $ResourceOrTagKeyArgument$Info$Template, arg1: $JsonObject_): void;
+        unpack(arg0: $ResourceOrTagKeyArgument<$ResourceOrTagKeyArgument$Info$Template>): $ResourceOrTagKeyArgument$Info$Template;
+        deserializeFromNetwork(arg0: $FriendlyByteBuf): $ResourceOrTagKeyArgument$Info$Template;
+        constructor();
+    }
+    export class $ResourceArgument<T> implements $ArgumentType<$Holder$Reference<T>> {
+        static getEntityType(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Holder$Reference<$EntityType<never>>;
+        static getConfiguredFeature(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Holder$Reference<$ConfiguredFeature<never, never>>;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        static getSummonableEntityType(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Holder$Reference<$EntityType<never>>;
+        static getMobEffect(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Holder$Reference<$MobEffect>;
+        static getEnchantment(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Holder$Reference<$Enchantment>;
+        getExamples(): $Collection<string>;
+        static resource<T>(arg0: $CommandBuildContext, arg1: $ResourceKey_<$Registry<T>>): $ResourceArgument<T>;
+        static getAttribute(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Holder$Reference<$Attribute>;
+        static getStructure(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Holder$Reference<$Structure>;
+        static getResource<T>(arg0: $CommandContext<$CommandSourceStack>, arg1: string, arg2: $ResourceKey_<$Registry<T>>): $Holder$Reference<T>;
+        parse(arg0: $StringReader): $Holder$Reference<$Holder$Reference<T>>;
+        parse<S>(arg0: $StringReader, arg1: S): $Holder$Reference<T>;
+        static ERROR_UNKNOWN_RESOURCE: $Dynamic2CommandExceptionType;
+        static ERROR_INVALID_RESOURCE_TYPE: $Dynamic3CommandExceptionType;
+        constructor(arg0: $CommandBuildContext, arg1: $ResourceKey_<$Registry<$Holder$Reference<T>>>);
+        get examples(): $Collection<string>;
+    }
+    export class $GameProfileArgument$SelectorResult implements $GameProfileArgument$Result {
+        getNames(arg0: $CommandSourceStack): $Collection<$GameProfile>;
+        constructor(arg0: $EntitySelector);
+    }
+    export class $ResourceOrTagArgument$ResourceResult<T> extends $Record implements $ResourceOrTagArgument$Result<T> {
+        or(arg0: $Predicate_<T>): $Predicate<T>;
+        negate(): $Predicate<T>;
+        and(arg0: $Predicate_<T>): $Predicate<T>;
+    }
+    /**
+     * Values that may be interpreted as {@link $ResourceOrTagArgument$ResourceResult}.
+     */
+    export type $ResourceOrTagArgument$ResourceResult_<T> = { value?: $Holder$Reference<any>,  } | [value?: $Holder$Reference<any>, ];
+    export class $ResourceArgument$Info<T> implements $ArgumentTypeInfo<$ResourceArgument<T>, $ResourceArgument$Info$Template> {
+        serializeToNetwork(arg0: $ResourceArgument$Info$Template, arg1: $FriendlyByteBuf): void;
+        serializeToJson(arg0: $ResourceArgument$Info$Template, arg1: $JsonObject_): void;
+        unpack(arg0: $ResourceArgument<$ResourceArgument$Info$Template>): $ResourceArgument$Info$Template;
+        deserializeFromNetwork(arg0: $FriendlyByteBuf): $ResourceArgument$Info$Template;
+        constructor();
+    }
+    export class $ResourceOrTagArgument<T> implements $ArgumentType<$ResourceOrTagArgument$Result<T>> {
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        static resourceOrTag<T>(arg0: $CommandBuildContext, arg1: $ResourceKey_<$Registry<T>>): $ResourceOrTagArgument<T>;
+        static getResourceOrTag<T>(arg0: $CommandContext<$CommandSourceStack>, arg1: string, arg2: $ResourceKey_<$Registry<T>>): $ResourceOrTagArgument$Result<T>;
+        getExamples(): $Collection<string>;
+        parse<S>(arg0: $StringReader, arg1: S): $ResourceOrTagArgument$Result<T>;
+        parse(arg0: $StringReader): $ResourceOrTagArgument$Result<T>;
+        constructor(arg0: $CommandBuildContext, arg1: $ResourceKey_<$Registry<$ResourceOrTagArgument$Result<T>>>);
+        get examples(): $Collection<string>;
+    }
+    export class $RangeArgument$Ints implements $RangeArgument<$MinMaxBounds$Ints> {
+        static getRange(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $MinMaxBounds$Ints;
+        getExamples(): $Collection<string>;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        parse<S>(arg0: $StringReader, arg1: S): $MinMaxBounds$Ints;
+        parse(arg0: $StringReader): $MinMaxBounds$Ints;
+        constructor();
+        get examples(): $Collection<string>;
+    }
+    export class $AngleArgument$SingleAngle {
+        getAngle(arg0: $CommandSourceStack): number;
+    }
+    export class $StyleArgument implements $ArgumentType<$Style> {
+        static getStyle(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Style;
+        getExamples(): $Collection<string>;
+        static style(arg0: $CommandBuildContext): $StyleArgument;
+        parse(arg0: $StringReader): $Style;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        parse<S>(arg0: $StringReader, arg1: S): $Style;
+        static ERROR_INVALID_JSON: $DynamicCommandExceptionType;
+        get examples(): $Collection<string>;
+    }
+    export class $OperationArgument$SimpleOperation {
+    }
+    export interface $OperationArgument$SimpleOperation extends $OperationArgument$Operation {
+    }
+    /**
+     * Values that may be interpreted as {@link $OperationArgument$SimpleOperation}.
+     */
+    export type $OperationArgument$SimpleOperation_ = (() => void);
+    export class $ObjectiveCriteriaArgument implements $ArgumentType<$ObjectiveCriteria> {
+        static criteria(): $ObjectiveCriteriaArgument;
+        static getCriteria(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $ObjectiveCriteria;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        getExamples(): $Collection<string>;
+        getName<T>(arg0: $StatType_<T>, arg1: $Object): string;
+        parse<S>(arg0: $StringReader, arg1: S): $ObjectiveCriteria;
+        parse(arg0: $StringReader): $ObjectiveCriteria;
+        static ERROR_INVALID_VALUE: $DynamicCommandExceptionType;
+        get examples(): $Collection<string>;
+    }
+    export class $HeightmapTypeArgument extends $StringRepresentableArgument<$Heightmap$Types> {
+        static heightmap(): $HeightmapTypeArgument;
+        static getHeightmap(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Heightmap$Types;
+    }
+    export class $TemplateMirrorArgument extends $StringRepresentableArgument<$Mirror> {
+        static templateMirror(): $StringRepresentableArgument<$Mirror>;
+        static getMirror(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $Mirror;
+    }
+    export class $ColorArgument implements $ArgumentType<$ChatFormatting> {
+        static getColor(arg0: $CommandContext<$CommandSourceStack>, arg1: string): $ChatFormatting;
+        listSuggestions<S>(arg0: $CommandContext<S>, arg1: $SuggestionsBuilder): $CompletableFuture<$Suggestions>;
+        getExamples(): $Collection<string>;
+        static color(): $ColorArgument;
+        parse<S>(arg0: $StringReader, arg1: S): $ChatFormatting;
+        parse(arg0: $StringReader): $ChatFormatting;
+        static ERROR_INVALID_VALUE: $DynamicCommandExceptionType;
+        get examples(): $Collection<string>;
+    }
+}

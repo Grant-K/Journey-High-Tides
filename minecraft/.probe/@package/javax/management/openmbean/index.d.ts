@@ -1,0 +1,48 @@
+import { $Serializable } from "@package/java/io";
+import { $Object } from "@package/java/lang";
+import { $Collection, $Set, $List } from "@package/java/util";
+
+declare module "@package/javax/management/openmbean" {
+    export class $OpenType<T> implements $Serializable {
+        isValue(arg0: $Object): boolean;
+        getClassName(): string;
+        getDescription(): string;
+        isArray(): boolean;
+        getTypeName(): string;
+        static ALLOWED_CLASSNAMES_LIST: $List<string>;
+        /**
+         * @deprecated
+         */
+        static ALLOWED_CLASSNAMES: string[];
+        get className(): string;
+        get description(): string;
+        get array(): boolean;
+        get typeName(): string;
+    }
+    export class $CompositeType extends $OpenType<$CompositeData> {
+        getDescription(arg0: string): string;
+        containsKey(arg0: string): boolean;
+        keySet(): $Set<string>;
+        getType(arg0: string): $OpenType<never>;
+        static ALLOWED_CLASSNAMES_LIST: $List<string>;
+        /**
+         * @deprecated
+         */
+        static ALLOWED_CLASSNAMES: string[];
+        constructor(arg0: string, arg1: string, arg2: string[], arg3: string[], arg4: $OpenType<never>[]);
+    }
+    export class $CompositeData {
+    }
+    export interface $CompositeData {
+        getCompositeType(): $CompositeType;
+        getAll(arg0: string[]): $Object[];
+        get(arg0: string): $Object;
+        equals(arg0: $Object): boolean;
+        toString(): string;
+        values(): $Collection<never>;
+        hashCode(): number;
+        containsKey(arg0: string): boolean;
+        containsValue(arg0: $Object): boolean;
+        get compositeType(): $CompositeType;
+    }
+}

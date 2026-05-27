@@ -1,0 +1,11 @@
+export * as lua from "@package/org/figuramc/figura/lua";
+export * as model from "@package/org/figuramc/figura/model";
+export * as permissions from "@package/org/figuramc/figura/permissions";
+export * as mixin from "@package/org/figuramc/figura/mixin";
+export * as ducks from "@package/org/figuramc/figura/ducks";
+export * as font from "@package/org/figuramc/figura/font";
+export * as math from "@package/org/figuramc/figura/math";
+export * as animation from "@package/org/figuramc/figura/animation";
+export * as entries from "@package/org/figuramc/figura/entries";
+export * as utils from "@package/org/figuramc/figura/utils";
+export * as avatar from "@package/org/figuramc/figura/avatar";

@@ -1,0 +1,3 @@
+#008 minecraft:desert
+#28D minecraft:mangrove_swamp
+#5FF minecraft:river

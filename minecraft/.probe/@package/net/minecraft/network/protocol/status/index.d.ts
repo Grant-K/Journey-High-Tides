@@ -1,0 +1,118 @@
+import { $Codec } from "@package/com/mojang/serialization";
+import { $Component_, $Component } from "@package/net/minecraft/network/chat";
+import { $ClientboundPacketListener, $FriendlyByteBuf, $ProtocolInfo$Unbound, $ConnectionProtocol, $ProtocolInfo } from "@package/net/minecraft/network";
+import { $GameProfile } from "@package/com/mojang/authlib";
+import { $PacketType, $Packet } from "@package/net/minecraft/network/protocol";
+import { $ServerPacketListener } from "@package/net/minecraft/network/protocol/game";
+import { $List, $List_ } from "@package/java/util";
+import { $ByteBuf } from "@package/io/netty/buffer";
+import { $ServerDataExtension } from "@package/com/aizistral/nochatreports/common/core";
+import { $Record } from "@package/java/lang";
+import { $ClientPongPacketListener, $ServerPingPacketListener } from "@package/net/minecraft/network/protocol/ping";
+import { $StreamCodec } from "@package/net/minecraft/network/codec";
+
+declare module "@package/net/minecraft/network/protocol/status" {
+    export class $ServerStatusPacketListener {
+    }
+    export interface $ServerStatusPacketListener extends $ServerPacketListener, $ServerPingPacketListener {
+        handleStatusRequest(arg0: $ServerboundStatusRequestPacket): void;
+        protocol(): $ConnectionProtocol;
+    }
+    export class $ServerStatus$Players extends $Record {
+        online(): number;
+        sample(): $List<$GameProfile>;
+        max(): number;
+        static CODEC: $Codec<$ServerStatus$Players>;
+        constructor(max: number, online: number, sample: $List_<$GameProfile>);
+    }
+    /**
+     * Values that may be interpreted as {@link $ServerStatus$Players}.
+     */
+    export type $ServerStatus$Players_ = { max?: number, sample?: $List_<$GameProfile>, online?: number,  } | [max?: number, sample?: $List_<$GameProfile>, online?: number, ];
+    export class $ClientStatusPacketListener {
+    }
+    export interface $ClientStatusPacketListener extends $ClientPongPacketListener, $ClientboundPacketListener {
+        handleStatusResponse(arg0: $ClientboundStatusResponsePacket_): void;
+        protocol(): $ConnectionProtocol;
+    }
+    export class $ServerStatus$Version extends $Record {
+        protocol(): number;
+        name(): string;
+        static current(): $ServerStatus$Version;
+        static CODEC: $Codec<$ServerStatus$Version>;
+        constructor(name: string, protocol: number);
+    }
+    /**
+     * Values that may be interpreted as {@link $ServerStatus$Version}.
+     */
+    export type $ServerStatus$Version_ = { name?: string, protocol?: number,  } | [name?: string, protocol?: number, ];
+    export class $ClientboundStatusResponsePacket extends $Record implements $Packet<$ClientStatusPacketListener> {
+        cachedStatus(): string;
+        handle(arg0: $ClientStatusPacketListener): void;
+        type(): $PacketType<$ClientboundStatusResponsePacket>;
+        status(): $ServerStatus;
+        isSkippable(): boolean;
+        isTerminal(): boolean;
+        static STREAM_CODEC: $StreamCodec<$FriendlyByteBuf, $ClientboundStatusResponsePacket>;
+        constructor(arg0: $ServerStatus_);
+        constructor(status: $ServerStatus_, cachedStatus: string);
+        get skippable(): boolean;
+        get terminal(): boolean;
+    }
+    /**
+     * Values that may be interpreted as {@link $ClientboundStatusResponsePacket}.
+     */
+    export type $ClientboundStatusResponsePacket_ = { status?: $ServerStatus_, cachedStatus?: string,  } | [status?: $ServerStatus_, cachedStatus?: string, ];
+    export class $ServerboundStatusRequestPacket implements $Packet<$ServerStatusPacketListener> {
+        handle(arg0: $ServerStatusPacketListener): void;
+        type(): $PacketType<$ServerboundStatusRequestPacket>;
+        isSkippable(): boolean;
+        isTerminal(): boolean;
+        static INSTANCE: $ServerboundStatusRequestPacket;
+        static STREAM_CODEC: $StreamCodec<$ByteBuf, $ServerboundStatusRequestPacket>;
+        get skippable(): boolean;
+        get terminal(): boolean;
+    }
+    export class $ServerStatus$Favicon extends $Record {
+        iconBytes(): number[];
+        static CODEC: $Codec<$ServerStatus$Favicon>;
+        constructor(iconBytes: number[]);
+    }
+    /**
+     * Values that may be interpreted as {@link $ServerStatus$Favicon}.
+     */
+    export type $ServerStatus$Favicon_ = { iconBytes?: number[],  } | [iconBytes?: number[], ];
+    export class $StatusPacketTypes {
+        static SERVERBOUND_STATUS_REQUEST: $PacketType<$ServerboundStatusRequestPacket>;
+        static CLIENTBOUND_STATUS_RESPONSE: $PacketType<$ClientboundStatusResponsePacket>;
+        constructor();
+    }
+    export class $ServerStatus extends $Record implements $ServerDataExtension {
+        players(): ($ServerStatus$Players) | undefined;
+        favicon(): ($ServerStatus$Favicon) | undefined;
+        preventsChatReports(): boolean;
+        setPreventsChatReports(arg0: boolean): void;
+        isModded(): boolean;
+        enforcesSecureChat(): boolean;
+        description(): $Component;
+        version(): ($ServerStatus$Version) | undefined;
+        static CODEC: $Codec<$ServerStatus>;
+        constructor(description: $Component_, players: ($ServerStatus$Players_) | undefined, version: ($ServerStatus$Version_) | undefined, favicon: ($ServerStatus$Favicon_) | undefined, enforcesSecureChat: boolean, isModded: boolean);
+        /**
+         * @deprecated
+         */
+        constructor(arg0: $Component_, arg1: ($ServerStatus$Players_) | undefined, arg2: ($ServerStatus$Version_) | undefined, arg3: ($ServerStatus$Favicon_) | undefined, arg4: boolean);
+        get modded(): boolean;
+    }
+    /**
+     * Values that may be interpreted as {@link $ServerStatus}.
+     */
+    export type $ServerStatus_ = { description?: $Component_, enforcesSecureChat?: boolean, players?: ($ServerStatus$Players_) | undefined, isModded?: boolean, version?: ($ServerStatus$Version_) | undefined, favicon?: ($ServerStatus$Favicon_) | undefined,  } | [description?: $Component_, enforcesSecureChat?: boolean, players?: ($ServerStatus$Players_) | undefined, isModded?: boolean, version?: ($ServerStatus$Version_) | undefined, favicon?: ($ServerStatus$Favicon_) | undefined, ];
+    export class $StatusProtocols {
+        static CLIENTBOUND: $ProtocolInfo<$ClientStatusPacketListener>;
+        static CLIENTBOUND_TEMPLATE: $ProtocolInfo$Unbound<$ClientStatusPacketListener, $FriendlyByteBuf>;
+        static SERVERBOUND_TEMPLATE: $ProtocolInfo$Unbound<$ServerStatusPacketListener, $ByteBuf>;
+        static SERVERBOUND: $ProtocolInfo<$ServerStatusPacketListener>;
+        constructor();
+    }
+}

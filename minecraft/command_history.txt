@@ -1,0 +1,50 @@
+/probejs
+/kubejs reload server-scripts
+/kubejs reload
+/reload
+/kubejs reload
+/kubejs reload server-scripts
+/reload
+/visualrecipeeditor craftinggrid
+/visualrecipeeditor
+/visualrecipeeditor maingui
+/kubejs reload server-scripts
+/reload
+/gamerule doDaylightCycle false
+/time set day
+/reload
+/gamemode survival
+/gamemode creative
+/time set day
+/gamerule doDaylightCycle
+/gamerule doDaylightCycle false
+/reload
+/kubejs reload server-scripts
+/reload
+/probejs
+/kubejs generate-typings
+/kubejs dump events
+/kubejs dump registry
+/kubejs offhand
+/reload
+/probejs
+/reload
+/summon slime -187.65 -60.00 -237.06 {Size:100}
+/spawn
+/time set day
+/tp 423 95 242
+/time set day
+/gamerule doDaylightCycle false
+/spawn
+/locate structure ruined
+/locate structure minecraft:ruined_portal
+/tp @s -448 ~ 64
+/weather clear
+/tp @s -448 ~ 64
+/back
+/locate structure minecraft:ruined_portal
+/lootr chest minecraft:chests/ruined_portal
+/gamemode survival
+/gamemode creative
+/gamerule doWeatherCycle false
+/weather clear

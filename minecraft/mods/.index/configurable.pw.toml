@@ -1,0 +1,16 @@
+filename = 'configurable-3.4.0+1.21.1-neoforge.jar'
+name = 'Configurable'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge' ]
+x-prismlauncher-mc-versions = [ '1.21.1', '1.21.2', '1.21.3', '1.21.4' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '5a1202d3591639a5ffaf93944caeda6ea76a64683fb5b8339706c08d921eb21f371f902e55ab6d8b0683b1cc17f8c4be5739b949f011a974dcf93169ac5835fd'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/lGffrQ3O/versions/RRuOTKSD/configurable-3.4.0%2B1.21.1-neoforge.jar'
+
+[update.modrinth]
+mod-id = 'lGffrQ3O'
+version = 'RRuOTKSD'

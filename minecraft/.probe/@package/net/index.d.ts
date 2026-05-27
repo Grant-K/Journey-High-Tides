@@ -1,0 +1,15 @@
+export * as minecraft from "@package/net/minecraft";
+export * as neoforged from "@package/net/neoforged";
+export * as fabricmc from "@package/net/fabricmc";
+export * as mehvahdjukaar from "@package/net/mehvahdjukaar";
+export * as caffeinemc from "@package/net/caffeinemc";
+export * as createmod from "@package/net/createmod";
+export * as sweenus from "@package/net/sweenus";
+export * as blay09 from "@package/net/blay09";
+export * as irisshaders from "@package/net/irisshaders";
+export * as darkhax from "@package/net/darkhax";
+export * as raphimc from "@package/net/raphimc";
+export * as silentchaos512 from "@package/net/silentchaos512";
+export * as bettercombat from "@package/net/bettercombat";
+export * as zhaiji from "@package/net/zhaiji";
+export * as tslat from "@package/net/tslat";

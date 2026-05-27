@@ -1,0 +1,160 @@
+import { $Level, $BlockGetter, $Level_ } from "@package/net/minecraft/world/level";
+import { $Item } from "@package/net/minecraft/world/item";
+import { $MapCodec } from "@package/com/mojang/serialization";
+import { $AccessorPistonMovingBlockEntity } from "@package/org/violetmoon/quark/mixin/mixins/accessor";
+import { $Entity } from "@package/net/minecraft/world/entity";
+import { $CallbackInfo, $CallbackInfoReturnable } from "@package/org/spongepowered/asm/mixin/injection/callback";
+import { $VoxelShape } from "@package/net/minecraft/world/phys/shapes";
+import { $List } from "@package/java/util";
+import { $BlockPos, $BlockPos_, $Direction_, $Direction, $IdMapper } from "@package/net/minecraft/core";
+import { $DirectionProperty, $EnumProperty, $PistonType, $BooleanProperty } from "@package/net/minecraft/world/level/block/state/properties";
+import { $Object2ByteLinkedOpenHashMap } from "@package/it/unimi/dsi/fastutil/objects";
+import { $IExtendedPistonTile } from "@package/net/mehvahdjukaar/moonlight/core/misc";
+import { $StateDefinition, $BlockState_, $BlockBehaviour$Properties, $BlockState } from "@package/net/minecraft/world/level/block/state";
+import { $IBlockHolder } from "@package/net/mehvahdjukaar/moonlight/api/block";
+import { $BaseEntityBlock, $Block$BlockStatePairKey, $DirectionalBlock, $Block } from "@package/net/minecraft/world/level/block";
+import { $AccessorPistonStructureResolver } from "@package/org/violetmoon/zeta/mixin/mixins";
+import { $ThreadLocal } from "@package/java/lang";
+import { $AABB_, $AABB } from "@package/net/minecraft/world/phys";
+import { $BlockEntity } from "@package/net/minecraft/world/level/block/entity";
+
+declare module "@package/net/minecraft/world/level/block/piston" {
+    export class $PistonBaseBlock extends $DirectionalBlock {
+        codec(): $MapCodec<$PistonBaseBlock>;
+        static isPushable(arg0: $BlockState_, arg1: $Level_, arg2: $BlockPos_, arg3: $Direction_, arg4: boolean, arg5: $Direction_): boolean;
+        handler$jnf000$ftbchunks$onMoveBlocks(level: $Level_, blockPos: $BlockPos_, direction: $Direction_, extending: boolean, cir: $CallbackInfoReturnable<any>, pistonStructureResolver: $PistonStructureResolver): void;
+        static OCCLUSION_CACHE: $ThreadLocal<$Object2ByteLinkedOpenHashMap<$Block$BlockStatePairKey>>;
+        static UPDATE_NONE: number;
+        static UPDATE_INVISIBLE: number;
+        stateDefinition: $StateDefinition<$Block, $BlockState>;
+        static UPDATE_MOVE_BY_PISTON: number;
+        static UPDATE_LIMIT: number;
+        static UPDATE_ALL: number;
+        static TRIGGER_EXTEND: number;
+        descriptionId: string;
+        static PLATFORM_THICKNESS: number;
+        static UPDATE_KNOWN_SHAPE: number;
+        static UPDATE_SUPPRESS_DROPS: number;
+        static UPDATE_IMMEDIATE: number;
+        item: $Item;
+        static CODEC: $MapCodec<$PistonBaseBlock>;
+        static EXTENDED: $BooleanProperty;
+        static UPDATE_NEIGHBORS: number;
+        static INDESTRUCTIBLE: number;
+        static TRIGGER_CONTRACT: number;
+        static BLOCK_STATE_REGISTRY: $IdMapper<$BlockState>;
+        static UPDATE_ALL_IMMEDIATE: number;
+        static TRIGGER_DROP: number;
+        static INSTANT: number;
+        static UPDATE_CLIENTS: number;
+        static FACING: $DirectionProperty;
+        constructor(arg0: boolean, arg1: $BlockBehaviour$Properties);
+    }
+    export class $PistonMath {
+        static getMovementArea(arg0: $AABB_, arg1: $Direction_, arg2: number): $AABB;
+        constructor();
+    }
+    export class $MovingPistonBlock extends $BaseEntityBlock {
+        codec(): $MapCodec<$MovingPistonBlock>;
+        static newMovingBlockEntity(arg0: $BlockPos_, arg1: $BlockState_, arg2: $BlockState_, arg3: $Direction_, arg4: boolean, arg5: boolean): $BlockEntity;
+        static UPDATE_IMMEDIATE: number;
+        item: $Item;
+        static CODEC: $MapCodec<$MovingPistonBlock>;
+        static UPDATE_NEIGHBORS: number;
+        static INDESTRUCTIBLE: number;
+        static OCCLUSION_CACHE: $ThreadLocal<$Object2ByteLinkedOpenHashMap<$Block$BlockStatePairKey>>;
+        static UPDATE_NONE: number;
+        static UPDATE_INVISIBLE: number;
+        stateDefinition: $StateDefinition<$Block, $BlockState>;
+        static UPDATE_MOVE_BY_PISTON: number;
+        static UPDATE_LIMIT: number;
+        static BLOCK_STATE_REGISTRY: $IdMapper<$BlockState>;
+        static UPDATE_ALL: number;
+        static UPDATE_ALL_IMMEDIATE: number;
+        descriptionId: string;
+        static UPDATE_KNOWN_SHAPE: number;
+        static UPDATE_SUPPRESS_DROPS: number;
+        static INSTANT: number;
+        static UPDATE_CLIENTS: number;
+        static FACING: $DirectionProperty;
+        static TYPE: $EnumProperty<$PistonType>;
+        constructor(arg0: $BlockBehaviour$Properties);
+    }
+    export class $PistonHeadBlock extends $DirectionalBlock {
+        static OCCLUSION_CACHE: $ThreadLocal<$Object2ByteLinkedOpenHashMap<$Block$BlockStatePairKey>>;
+        static UPDATE_NONE: number;
+        static UPDATE_INVISIBLE: number;
+        stateDefinition: $StateDefinition<$Block, $BlockState>;
+        static UPDATE_MOVE_BY_PISTON: number;
+        static PLATFORM: number;
+        static UPDATE_LIMIT: number;
+        static UPDATE_ALL: number;
+        descriptionId: string;
+        static UPDATE_KNOWN_SHAPE: number;
+        static UPDATE_SUPPRESS_DROPS: number;
+        static TYPE: $EnumProperty<$PistonType>;
+        static UPDATE_IMMEDIATE: number;
+        item: $Item;
+        static CODEC: $MapCodec<$PistonHeadBlock>;
+        static UPDATE_NEIGHBORS: number;
+        static INDESTRUCTIBLE: number;
+        static SHORT: $BooleanProperty;
+        static BLOCK_STATE_REGISTRY: $IdMapper<$BlockState>;
+        static UPDATE_ALL_IMMEDIATE: number;
+        static INSTANT: number;
+        static UPDATE_CLIENTS: number;
+        static FACING: $DirectionProperty;
+        constructor(arg0: $BlockBehaviour$Properties);
+    }
+    export class $PistonStructureResolver implements $AccessorPistonStructureResolver {
+        getToPush(): $List<$BlockPos>;
+        getToDestroy(): $List<$BlockPos>;
+        getPushDirection(): $Direction;
+        resolve(): boolean;
+        zeta$extending(): boolean;
+        zeta$level(): $Level;
+        zeta$pistonPos(): $BlockPos;
+        zeta$pistonDirection(): $Direction;
+        zeta$startPos(): $BlockPos;
+        static MAX_PUSH_DEPTH: number;
+        constructor(arg0: $Level_, arg1: $BlockPos_, arg2: $Direction_, arg3: boolean);
+        get toPush(): $List<$BlockPos>;
+        get toDestroy(): $List<$BlockPos>;
+        get pushDirection(): $Direction;
+    }
+    export class $PistonMovingBlockEntity extends $BlockEntity implements $IExtendedPistonTile, $IBlockHolder, $AccessorPistonMovingBlockEntity {
+        getDirection(): $Direction;
+        getCollisionShape(arg0: $BlockGetter, arg1: $BlockPos_): $VoxelShape;
+        getProgress(arg0: number): number;
+        isExtending(): boolean;
+        getLastTicked(): number;
+        finalTick(): void;
+        getMovedState(): $BlockState;
+        isSourcePiston(): boolean;
+        getXOff(arg0: number): number;
+        getYOff(arg0: number): number;
+        getZOff(arg0: number): number;
+        static moveCollidedEntities(arg0: $Level_, arg1: $BlockPos_, arg2: number, arg3: $PistonMovingBlockEntity): void;
+        getMovementDirection(): $Direction;
+        static moveStuckEntities(arg0: $Level_, arg1: $BlockPos_, arg2: number, arg3: $PistonMovingBlockEntity): void;
+        handler$man000$moonlight$onFinishedShortPulse(ci: $CallbackInfo): void;
+        getHeldBlock(): $BlockState;
+        setHeldBlock(state: $BlockState_): boolean;
+        tickMovedBlock(level: $Level_, pos: $BlockPos_): void;
+        static getMoveEntityByPiston$quark_$md$68cb88$0(arg0: $Direction_, arg1: $Entity, arg2: number, arg3: $Direction_): void;
+        static tick(arg0: $Level_, arg1: $BlockPos_, arg2: $BlockState_, arg3: $PistonMovingBlockEntity): void;
+        progressO: number;
+        static TICK_MOVEMENT: number;
+        lastTicked: number;
+        progress: number;
+        static ATTACHMENTS_NBT_KEY: string;
+        deathTicks: number;
+        constructor(arg0: $BlockPos_, arg1: $BlockState_, arg2: $BlockState_, arg3: $Direction_, arg4: boolean, arg5: boolean);
+        constructor(arg0: $BlockPos_, arg1: $BlockState_);
+        get direction(): $Direction;
+        get extending(): boolean;
+        get movedState(): $BlockState;
+        get sourcePiston(): boolean;
+        get movementDirection(): $Direction;
+    }
+}

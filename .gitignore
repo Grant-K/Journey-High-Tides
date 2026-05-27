@@ -2,3 +2,6 @@ instance.cfg
 *.log
 minecraft/options.txt
 minecraft/saves/*
+minecraft/usernamecache.json
+minecraft/usercache.json
+minecraft/servers.dat

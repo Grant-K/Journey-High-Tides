@@ -1,3 +1,4 @@
 instance.cfg
 *.log
 minecraft/options.txt
+minecraft/saves/*
